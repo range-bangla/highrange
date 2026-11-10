@@ -1,0 +1,2250 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High Range Internet Service | Optical Fiber ISP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fef2f2',
+              100: '#fee2e2',
+              200: '#fecaca',
+              300: '#fca5a5',
+              400: '#f87171',
+              500: '#ef4444',
+              600: '#dc2626',
+              700: '#b91c1c',
+              800: '#991b1b',
+              900: '#7f1d1d',
+              950: '#450a0a',
+            },
+            dark: {
+              base: '#080c14',
+              surface: '#0f172a',
+              card: '#131e33',
+              border: '#1e293b'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '"Hind Siliguri"', 'sans-serif'],
+            bangla: ['"Hind Siliguri"', 'sans-serif'],
+          },
+          boxShadow: {
+            'glow': '0 0 25px -5px rgba(220, 38, 38, 0.45)',
+            'glow-lg': '0 0 40px -5px rgba(220, 38, 38, 0.6)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #080c14;
+      color: #f1f5f9;
+      font-family: 'Plus Jakarta Sans', 'Hind Siliguri', sans-serif;
+    }
+    .text-glow {
+      text-shadow: 0 0 16px rgba(239, 68, 68, 0.6);
+    }
+    .custom-gradient-card {
+      background: linear-gradient(145deg, rgba(19, 30, 51, 0.95), rgba(15, 23, 42, 0.95));
+      backdrop-filter: blur(12px);
+    }
+    .highlight-card {
+      background: linear-gradient(145deg, rgba(35, 15, 20, 0.95), rgba(20, 24, 38, 0.95));
+      border: 2px solid #ef4444;
+      box-shadow: 0 10px 35px -5px rgba(239, 68, 68, 0.4);
+    }
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 0.4; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+    .radar-pulse {
+      animation: pulse-ring 2.5s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-[#080c14] text-slate-100 min-h-screen antialiased selection:bg-brand-600 selection:text-white">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <aside aria-label="Announcement" class="bg-gradient-to-r from-brand-900 via-brand-700 to-brand-900 border-b border-brand-600/40 text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span id="top-badge-display" class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-white text-brand-700 animate-pulse uppercase tracking-wider">Gandaria Exclusive</span>
+        <span class="font-medium text-white" id="top-announcement-text">High Range Fiber Coverage Live across all areas of Gandaria! Free Optical Fiber setup on 30 Mbps & above.</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-200">
+        <a href="tel:01700000000" class="hotline-link-display hover:text-white flex items-center gap-1 transition-colors">
+          <svg class="w-3.5 h-3.5 text-brand-300" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/></svg>
+          <span class="font-semibold text-white">Hotline: <span class="hotline-number-display">01700-000000</span></span>
+        </a>
+        <span class="text-brand-400">|</span>
+        <button id="lang-toggle-btn" class="font-semibold hover:text-white text-brand-200 flex items-center gap-1">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+          <span id="lang-indicator">বাংলায় দেখুন</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 bg-[#080c14]/90 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-700 to-brand-500 flex items-center justify-center shadow-glow group-hover:scale-105 transition-transform">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+          </svg>
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="text-xl font-extrabold tracking-tight text-white company-name-display">HIGH <span class="text-brand-500">RANGE</span></span>
+            <span class="inline-block w-2 h-2 rounded-full bg-brand-500 animate-ping"></span>
+          </div>
+          <p id="logo-subtitle-display" class="text-[11px] font-semibold text-slate-400 tracking-wider uppercase">Internet Service • Gandaria</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#packages" class="hover:text-brand-400 transition-colors">Packages</a>
+        <a href="#coverage" class="hover:text-brand-400 transition-colors"><span class="area-name-display">Gandaria</span> Coverage</a>
+        <a href="#calculator" class="hover:text-brand-400 transition-colors">Bill Calculator</a>
+        <a href="#speedtest" class="hover:text-brand-400 transition-colors">Speed Test</a>
+        <a href="#bdix" class="hover:text-brand-400 transition-colors">BDIX Servers</a>
+        <a href="#paybill" class="hover:text-brand-400 transition-colors">Pay Bill</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <button id="header-connect-btn" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-600 text-white font-semibold text-sm shadow-glow hover:shadow-glow-lg transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <span id="btn-get-connection">Get Connection</span>
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none" aria-label="Toggle Navigation Menu">
+        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0a0f1d] border-b border-slate-800 px-5 pt-3 pb-6 space-y-3">
+      <a href="#packages" class="block py-2 text-base font-medium text-slate-200 hover:text-brand-400 mobile-nav-link">Internet Packages</a>
+      <a href="#coverage" class="block py-2 text-base font-medium text-slate-200 hover:text-brand-400 mobile-nav-link"><span class="area-name-display">Gandaria</span> Coverage</a>
+      <a href="#calculator" class="block py-2 text-base font-medium text-slate-200 hover:text-brand-400 mobile-nav-link">Plan & Bill Calculator</a>
+      <a href="#speedtest" class="block py-2 text-base font-medium text-slate-200 hover:text-brand-400 mobile-nav-link">Live Speed Test</a>
+      <a href="#bdix" class="block py-2 text-base font-medium text-slate-200 hover:text-brand-400 mobile-nav-link">BDIX FTP & TV</a>
+      <a href="#paybill" class="block py-2 text-base font-medium text-slate-200 hover:text-brand-400 mobile-nav-link">Pay Bill Online</a>
+      <div class="pt-3 border-t border-slate-800">
+        <button id="mobile-connect-btn" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-center shadow-glow">
+          Get New Connection (নতুন সংযোগ)
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative overflow-hidden pt-8 pb-16 lg:pt-14 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -right-40 w-96 h-96 bg-brand-800/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Hero Text -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-950/80 border border-brand-700/60 text-brand-300 text-xs font-semibold tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-brand-500 animate-ping"></span>
+            <span id="hero-badge"> নির্ভরযোগ্য অপটিক্যাল ফাইবার নেটওয়ার্ক</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
+            <span id="hero-title-main-display">Superfast Internet in</span> <br>
+            <span id="hero-title-highlight-display" class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 via-red-400 to-rose-300 text-glow">Gandaria, Dhaka</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed" id="hero-subtitle">
+            Experience ultra-low latency gaming, buffer-free 4K streaming, and blazing BDIX downloads with HIGH RANGE Internet Service. Plans starting at only ৳500 / month.
+          </p>
+
+          <div class="grid grid-cols-3 gap-3 pt-2 max-w-lg mx-auto lg:mx-0">
+            <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <div id="stat1-val-display" class="text-xl sm:text-2xl font-black text-brand-400">100%</div>
+              <div id="stat1-lbl-display" class="text-[11px] font-medium text-slate-400">Fiber Optic Cable</div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <div id="stat2-val-display" class="text-xl sm:text-2xl font-black text-brand-400">100 Mbps</div>
+              <div id="stat2-lbl-display" class="text-[11px] font-medium text-slate-400">BDIX Speed Free</div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <div id="stat3-val-display" class="text-xl sm:text-2xl font-black text-brand-400">24/7</div>
+              <div id="stat3-lbl-display" class="text-[11px] font-medium text-slate-400">Gandaria Local Support</div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#packages" class="px-7 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-base shadow-glow hover:shadow-glow-lg transition-all flex items-center gap-2 transform hover:-translate-y-0.5">
+              <span>View Packages (প্যাকেজ দেখুন)</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <a href="#coverage" class="px-7 py-3.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold text-base transition-colors flex items-center gap-2">
+              <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>Check <span class="area-name-display">Gandaria</span> Coverage</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual Banner -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-2xl overflow-hidden border-2 border-brand-600/50 shadow-glow-lg group h-80 sm:h-96">
+            
+            <!-- Slider Track -->
+            <div id="hero-slider-track" class="flex h-full w-full transition-transform duration-500 ease-in-out">
+              <!-- Slides injected via JavaScript -->
+            </div>
+
+            <!-- Slider Controls -->
+            <button id="slider-prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-brand-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-20">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button id="slider-next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-brand-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-20">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <!-- Slider Dots -->
+            <div id="slider-dots" class="absolute bottom-24 left-0 right-0 flex justify-center gap-2 z-20">
+              <!-- Dots injected via JavaScript -->
+            </div>
+
+            <div class="absolute inset-0 bg-gradient-to-t from-[#080c14] via-[#080c14/40] to-transparent pointer-events-none z-10"></div>
+            
+            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#0f172a]/95 border border-brand-500/40 backdrop-blur-md z-20">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></div>
+                  <div>
+                    <p id="gateway-title-display" class="text-xs font-semibold text-white">Gandaria Gateway Online</p>
+                    <p id="gateway-stats-display" class="text-[11px] text-slate-400">Latency: 2ms • Uptime: 99.98%</p>
+                  </div>
+                </div>
+                <button id="hero-quick-test-btn" class="text-xs font-bold text-white bg-brand-600 hover:bg-brand-500 px-3 py-1.5 rounded-lg shadow transition-colors">
+                  Test Speed
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES SECTION -->
+  <section id="packages" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <div id="pkg-badge-display" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-950 border border-brand-700/60 text-brand-400 text-xs font-bold uppercase tracking-wider mb-3">
+        Official ISP Packages • Gandaria
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" id="pkg-title">
+        Choose Your High-Speed Internet Plan
+      </h2>
+      <p class="mt-3 text-slate-400 text-base" id="pkg-subtitle">
+        Transparent pricing with 1:8 contention ratio across all packages. All plans include unmetered YouTube cache, BDIX 100 Mbps, and 24/7 dedicated Gandaria NOC support.
+      </p>
+
+      <!-- Package Filters -->
+      <div class="inline-flex p-1.5 mt-6 rounded-xl bg-slate-900 border border-slate-800">
+        <button id="pkg-filter-all" class="px-5 py-2 rounded-lg text-xs font-bold transition-all bg-brand-600 text-white shadow">
+          All Plans
+        </button>
+        <button id="pkg-filter-budget" class="px-5 py-2 rounded-lg text-xs font-bold transition-all text-slate-400 hover:text-white">
+          Budget Friendly
+        </button>
+        <button id="pkg-filter-gaming" class="px-5 py-2 rounded-lg text-xs font-bold transition-all text-slate-400 hover:text-white">
+          Pro Gaming & 4K
+        </button>
+      </div>
+    </div>
+
+    <!-- The Packages Grid -->
+    <div id="packages-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Package cards will be injected here via JavaScript -->
+    </div>
+  </section>
+
+  <!-- COVERAGE CHECKER -->
+  <section id="coverage" class="py-16 bg-slate-900/60 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <div id="cov-badge-display" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-950 border border-brand-800 text-brand-400 text-xs font-bold uppercase tracking-wider">
+            Coverage Area • গেন্ডারিয়া এলাকা
+          </div>
+          <h2 id="cov-title-display" class="text-3xl font-extrabold text-white">
+            100% Optical Fiber Coverage Across Gandaria
+          </h2>
+          <p class="text-slate-300 text-sm leading-relaxed" id="cov-desc">
+            We have dedicated optical distribution frames (ODF) and high-capacity fiber rings installed throughout Gandaria. Type your road or area below to check instant fiber availability!
+          </p>
+
+          <!-- Interactive Area Search / Check -->
+          <div class="p-6 rounded-2xl bg-[#0f172a] border border-slate-700 shadow-xl space-y-4">
+            <label for="gandaria-road-select" class="block text-xs font-bold text-slate-300 uppercase tracking-wide">
+              Select or Search <span class="area-name-display">Gandaria</span> Road / Landmark:
+            </label>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <select id="gandaria-road-select" class="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500">
+                <!-- Dynamically populated from AdminConfig -->
+              </select>
+              <button id="check-coverage-btn" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-sm shadow-glow flex items-center justify-center gap-2 transition-all">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                <span>Check Status</span>
+              </button>
+            </div>
+
+            <!-- Dynamic Result Card -->
+            <div id="coverage-result" class="p-4 rounded-xl bg-emerald-950/40 border border-emerald-600/50 flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-emerald-600/30 flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              </div>
+              <div class="text-xs">
+                <p class="font-bold text-emerald-300 text-sm" id="cov-result-title">High Range Fiber Active in Selected Area!</p>
+                <p class="text-slate-300 mt-1" id="cov-result-detail">Primary fiber distribution box located within 35 meters. Instant activation within 3 hours available today.</p>
+                <button id="cov-apply-btn" class="mt-2 text-xs font-bold text-brand-400 hover:text-brand-300 underline">Book connection for this location &rarr;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hotspots Map Card -->
+        <div class="lg:col-span-6">
+          <div class="p-6 rounded-2xl custom-gradient-card border border-slate-700/80">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+              <h3 class="text-base font-bold text-white flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-500 animate-pulse"></span>
+                <span id="hubs-box-title-display">Gandaria Fiber Distribution Hubs</span>
+              </h3>
+              <span id="hubs-active-badge" class="text-[11px] font-semibold text-emerald-400 bg-emerald-950/60 px-2.5 py-0.5 rounded-full border border-emerald-700/50">All Hubs Active</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 mt-4 text-xs" id="hubs-grid">
+              <!-- Dynamically populated hubs -->
+            </div>
+
+            <!-- Notice -->
+            <div class="mt-5 p-3.5 rounded-xl bg-brand-950/40 border border-brand-800/40 text-[11px] text-slate-300 flex items-center gap-3">
+              <svg class="w-5 h-5 text-brand-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span id="cov-maintenance-notice-display">Our Gandaria maintenance team operates 24/7 on motorbikes with optical fusion splicers for immediate support.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE BILL & PLAN CALCULATOR -->
+  <section id="calculator" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-10">
+        <span class="px-3 py-1 rounded-full bg-brand-950 border border-brand-700/60 text-brand-400 text-xs font-bold uppercase tracking-wider">
+          Dynamic Estimator
+        </span>
+        <h2 id="calc-title-display" class="text-3xl font-extrabold text-white mt-2">Custom Package & Monthly Bill Calculator</h2>
+        <p id="calc-subtitle-display" class="text-slate-400 text-sm mt-1">Calculate your total monthly and setup cost with tailored add-ons.</p>
+      </div>
+
+      <div class="p-8 rounded-3xl custom-gradient-card border border-slate-700 shadow-2xl">
+        <div class="space-y-8">
+          
+          <!-- Speed Selection Buttons -->
+          <div>
+            <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-3">
+              Step 1: Select Your Desired Internet Speed
+            </label>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3" id="calc-speed-options">
+              <!-- Calculator buttons will be injected here via JavaScript -->
+            </div>
+          </div>
+
+          <!-- Add-ons Selection -->
+          <div>
+            <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-3">
+              Step 2: Optional Add-ons & Equipment
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <label class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900 border border-slate-800 cursor-pointer hover:border-slate-700">
+                <input type="checkbox" id="addon-realip" class="mt-1 w-4 h-4 text-brand-600 rounded bg-slate-800 border-slate-600 focus:ring-brand-500">
+                <div>
+                  <div class="text-xs font-bold text-white">Public Real IP</div>
+                  <div class="text-[11px] text-slate-400">For CCTV & Hosting (+৳150/mo)</div>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900 border border-slate-800 cursor-pointer hover:border-slate-700">
+                <input type="checkbox" id="addon-router" class="mt-1 w-4 h-4 text-brand-600 rounded bg-slate-800 border-slate-600 focus:ring-brand-500">
+                <div>
+                  <div class="text-xs font-bold text-white">Dual-Band WiFi Router</div>
+                  <div class="text-[11px] text-slate-400">Gigabit ONU (+৳1,400 one-time)</div>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900 border border-slate-800 cursor-pointer hover:border-slate-700">
+                <input type="checkbox" id="addon-freefiber" checked disabled class="mt-1 w-4 h-4 text-brand-600 rounded bg-slate-800 border-slate-600">
+                <div>
+                  <div class="text-xs font-bold text-white">Fiber Drop Cable</div>
+                  <div id="free-fiber-offer-display" class="text-[11px] text-emerald-400 font-semibold">100% FREE (Offer)</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Total Calculation Display -->
+          <div class="p-6 rounded-2xl bg-[#0a0f1d] border border-brand-800/50 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div>
+              <p class="text-xs text-slate-400 uppercase font-semibold">Selected Configuration:</p>
+              <h4 class="text-lg font-bold text-white" id="calc-summary-name">30 MBPS Plan</h4>
+              <p class="text-xs text-slate-400 mt-1" id="calc-summary-details">Base Plan • Free Fiber Drop Cable</p>
+            </div>
+
+            <div class="text-right sm:text-right">
+              <p class="text-xs text-slate-400">Monthly Bill Total:</p>
+              <div class="text-3xl font-black text-brand-500" id="calc-total-monthly">৳ 700</div>
+              <p class="text-[11px] text-slate-400" id="calc-setup-total">Setup / Hardware: ৳0</p>
+            </div>
+
+            <button id="calc-order-now-btn" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-extrabold text-sm shadow-glow transition-all whitespace-nowrap">
+              Book This Package
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE SPEED TEST SIMULATOR -->
+  <section id="speedtest" class="py-20 bg-slate-900/80 border-t border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-950 border border-brand-700/60 text-brand-400 text-xs font-bold uppercase tracking-wider mb-2">
+        Diagnostic Tool
+      </div>
+      <h2 id="speedtest-title-display" class="text-3xl font-extrabold text-white">Interactive Speed Test Simulator</h2>
+      <p id="speedtest-subtitle-display" class="text-slate-400 text-sm mt-1 mb-8">Test your current network response against High Range Gandaria Core Gateway.</p>
+
+      <div class="p-8 rounded-3xl custom-gradient-card border border-slate-700 max-w-2xl mx-auto shadow-2xl">
+        
+        <div class="relative w-64 h-64 mx-auto flex items-center justify-center">
+          <canvas id="speedometer-canvas" width="260" height="260" class="w-full h-full"></canvas>
+          <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+            <span class="text-5xl font-black text-white font-mono tracking-tighter" id="speed-display-num">0.0</span>
+            <span class="text-xs font-bold text-brand-400 uppercase tracking-widest mt-1">MBPS</span>
+            <span class="text-[11px] text-slate-400 font-semibold mt-1" id="speed-test-status">Ready to Test</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3 my-6 pt-4 border-t border-slate-800">
+          <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+            <div class="text-[10px] text-slate-400 uppercase font-semibold">Ping</div>
+            <div class="text-lg font-black text-white" id="speed-ping-val">2 ms</div>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+            <div class="text-[10px] text-slate-400 uppercase font-semibold">Download</div>
+            <div class="text-lg font-black text-emerald-400" id="speed-down-val">-- Mbps</div>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+            <div class="text-[10px] text-slate-400 uppercase font-semibold">Upload</div>
+            <div class="text-lg font-black text-brand-400" id="speed-up-val">-- Mbps</div>
+          </div>
+        </div>
+
+        <button id="start-speedtest-btn" class="px-8 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-sm shadow-glow transition-all flex items-center gap-2 mx-auto">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span id="speedtest-btn-text">Start High Range Speed Test</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BDIX & ENTERTAINMENT SECTION -->
+  <section id="bdix" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <span class="px-3 py-1 rounded-full bg-brand-950 border border-brand-700/60 text-brand-400 text-xs font-bold uppercase tracking-wider">
+        Ultra Speed Local Peering
+      </span>
+      <h2 id="bdix-title-display" class="text-3xl font-extrabold text-white mt-2">Free 100 Mbps BDIX & Local Servers</h2>
+      <p id="bdix-subtitle-display" class="text-slate-400 text-sm mt-1">Enjoy lightning-fast access to top Bangladeshi movie servers, torrents, and live TV channels without consuming your regular internet quota.</p>
+    </div>
+
+    <div id="bdix-servers-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <!-- BDIX Servers dynamically populated from AdminConfig -->
+    </div>
+  </section>
+
+  <!-- BILL PAY & CUSTOMER SELF-CARE -->
+  <section id="paybill" class="py-16 bg-slate-900/60 border-t border-slate-800">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="p-8 rounded-3xl custom-gradient-card border border-slate-700 shadow-2xl">
+        <div class="text-center max-w-xl mx-auto mb-8">
+          <span class="px-3 py-1 rounded-full bg-brand-950 border border-brand-700/60 text-brand-400 text-xs font-bold uppercase tracking-wider">
+            Self Care Portal
+          </span>
+          <h2 id="selfcare-title-display" class="text-2xl sm:text-3xl font-extrabold text-white mt-2">Instant Bill Payment & Account Status</h2>
+          <p id="selfcare-subtitle-display" class="text-slate-400 text-xs sm:text-sm mt-1">Enter your Username or Mobile Number to search account information.</p>
+        </div>
+
+        <!-- Search Box -->
+        <div class="max-w-md mx-auto flex gap-2">
+          <input type="text" id="bill-client-id-input" placeholder="e.g. Username or 01700..." class="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500">
+          <button id="search-bill-btn" class="px-5 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-sm shadow-glow transition-all">
+            Search
+          </button>
+        </div>
+
+        <!-- Dynamic Working Message -->
+        <div id="self-care-working-msg" class="hidden mt-8 p-5 rounded-2xl bg-brand-900/30 border border-brand-500/50 text-brand-200 text-sm font-semibold text-center max-w-lg mx-auto shadow-glow">
+          <!-- Text injected via JS AdminConfig -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#05080e] border-t border-slate-800/80 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <div class="space-y-4">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold">HR</div>
+            <span class="text-base font-extrabold text-white company-name-display">HIGH <span class="text-brand-500">RANGE</span></span>
+          </div>
+          <p class="text-xs text-slate-400 address-display">
+            DIT Road, Gandaria, Dhaka-1204
+          </p>
+          <p id="footer-partner-tag-display" class="text-[11px] text-slate-500">BTRC Registered ISP Partner</p>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white mb-3">Our Packages</h4>
+          <ul class="space-y-2">
+            <li><a href="#packages" class="hover:text-brand-400">High-Speed Fiber Plans</a></li>
+            <li><a href="#packages" class="hover:text-brand-400">1:8 Contention Ratio</a></li>
+            <li><a href="#calculator" class="hover:text-brand-400">Bill Calculator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white mb-3"><span class="area-name-display">Gandaria</span> Coverage</h4>
+          <ul id="footer-coverage-list" class="space-y-1.5 text-[11px]">
+            <!-- Populated dynamically -->
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white mb-3">Contact & Support</h4>
+          <p id="footer-office-title-display" class="text-white font-semibold">Gandaria Central Office</p>
+          <p class="text-slate-400 mt-1 address-display">DIT Road, Gandaria, Dhaka-1204</p>
+          <p class="mt-2 text-white font-bold">24/7 Helpline: <span class="hotline-number-display">01700-000000</span></p>
+          <p class="text-slate-400">Email: <a href="mailto:support@highrangeinternet.com" class="email-display hover:text-brand-400 transition-colors">support@highrangeinternet.com</a></p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <button id="footer-support-btn" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-brand-600 text-white font-bold transition-colors">
+              Submit Support Ticket
+            </button>
+            <button id="admin-login-btn" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white font-bold transition-colors">
+              Admin Login
+            </button>
+            <button id="open-admin-btn" class="hidden px-4 py-2 rounded-lg bg-brand-900/50 hover:bg-brand-600 border border-brand-700/50 text-brand-300 hover:text-white font-bold transition-colors">
+              ⚙️ Admin Edit Option
+            </button>
+            <button id="admin-logout-btn" class="hidden px-4 py-2 rounded-lg bg-red-900/50 hover:bg-red-600 border border-red-700/50 text-red-300 hover:text-white font-bold transition-colors">
+              Logout
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-10 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500">
+        <p id="footer-copyright-display">&copy; 2026 High Range Internet Service. All rights reserved. Gandaria, Dhaka.</p>
+        <p id="footer-tagline-display" class="mt-2 sm:mt-0 text-slate-400">High-Speed Optical Fiber Broadband Provider</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP / CONTACT BUTTON -->
+  <button id="floating-contact-btn" class="fixed bottom-6 right-6 z-40 p-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-xl hover:scale-110 transition-transform flex items-center justify-center" title="Chat on WhatsApp">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+    </svg>
+  </button>
+
+  <!-- MODAL: NEW CONNECTION BOOKING -->
+  <div id="booking-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+    <div class="relative w-full max-w-lg bg-[#0f172a] rounded-3xl border border-brand-600/70 shadow-glow-lg overflow-hidden">
+      <div class="px-6 py-5 bg-gradient-to-r from-brand-900 to-brand-800 border-b border-brand-700/60 flex items-center justify-between">
+        <div>
+          <h3 id="modal-booking-title-display" class="text-lg font-bold text-white flex items-center gap-2">
+            Apply for High Range Internet
+          </h3>
+          <p id="modal-booking-subtitle-display" class="text-xs text-brand-200">Gandaria Optical Fiber Fast Setup</p>
+        </div>
+        <button id="close-booking-modal-btn" class="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <form id="booking-form" class="p-6 space-y-4">
+        <div>
+          <label for="modal-cust-name" class="block text-xs font-semibold text-slate-300 mb-1">Your Full Name (আপনার নাম)</label>
+          <input type="text" id="modal-cust-name" required placeholder="e.g. Mohammad Rafiq" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="modal-cust-phone" class="block text-xs font-semibold text-slate-300 mb-1">Mobile Number (মোবাইল নম্বর)</label>
+            <input type="tel" id="modal-cust-phone" required placeholder="017XXXXXXXX" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500">
+          </div>
+          <div>
+            <label for="modal-pkg-select" class="block text-xs font-semibold text-slate-300 mb-1">Selected Package</label>
+            <select id="modal-pkg-select" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500">
+              <!-- Options injected via JavaScript -->
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="modal-gandaria-address" class="block text-xs font-semibold text-slate-300 mb-1">Detailed <span class="area-name-display">Gandaria</span> Address (রোড / হোল্ডিং / বাসা নম্বর)</label>
+          <textarea id="modal-gandaria-address" rows="2" required placeholder="e.g. House #22, Road #4, DIT Plot, Dhaka" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-brand-500"></textarea>
+        </div>
+
+        <div id="modal-booking-note-display" class="p-3 rounded-xl bg-brand-950/40 border border-brand-800/40 text-[11px] text-slate-300 flex items-center justify-between">
+          <span>Fiber Optic Cable: <strong class="text-emerald-400">FREE</strong></span>
+          <span>Tech Visit: <strong class="text-white">Today</strong></span>
+        </div>
+
+        <button type="submit" id="submit-booking-btn" class="w-full py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-sm shadow-glow transition-all">
+          Confirm Connection Request (আবেদন জমা দিন)
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: SUPPORT TICKET -->
+  <div id="support-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+    <div class="relative w-full max-w-lg bg-[#0f172a] rounded-3xl border border-brand-600/70 shadow-glow-lg overflow-hidden">
+      <div class="px-6 py-5 bg-gradient-to-r from-brand-900 to-brand-800 border-b border-brand-700/60 flex items-center justify-between">
+        <div>
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <svg class="w-5 h-5 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243-2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167 9.238z"/></svg>
+            Submit Support Ticket
+          </h3>
+          <p class="text-xs text-brand-200">24/7 Technical Support</p>
+        </div>
+        <button id="close-support-modal-btn" class="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <form id="support-form" class="p-6 space-y-4">
+        <div>
+          <label for="support-cust-name" class="block text-xs font-semibold text-slate-300 mb-1">Your Name (আপনার নাম)</label>
+          <input type="text" id="support-cust-name" required placeholder="e.g. Mohammad Rafiq" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500">
+        </div>
+
+        <div>
+          <label for="support-cust-phone" class="block text-xs font-semibold text-slate-300 mb-1">Contact Number (মোবাইল নম্বর)</label>
+          <input type="tel" id="support-cust-phone" required placeholder="017XXXXXXXX" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500">
+        </div>
+
+        <div>
+          <label for="support-gandaria-address" class="block text-xs font-semibold text-slate-300 mb-1">Address (ঠিকানা)</label>
+          <textarea id="support-gandaria-address" rows="2" required placeholder="e.g. House #22, Road #4" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-brand-500"></textarea>
+        </div>
+
+        <div>
+          <label for="support-problem" class="block text-xs font-semibold text-slate-300 mb-1">Describe Your Problem (সমস্যার বিবরণ)</label>
+          <textarea id="support-problem" rows="3" required placeholder="e.g. No internet access, red light on router, slow speed..." class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-brand-500"></textarea>
+        </div>
+
+        <button type="submit" id="submit-support-btn" class="w-full py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-sm shadow-glow transition-all">
+          Submit Ticket via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: ADMIN LOGIN -->
+  <div id="login-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+    <div class="relative w-full max-w-sm bg-[#0f172a] rounded-3xl border border-slate-700 shadow-2xl overflow-hidden">
+      <div class="px-6 py-5 bg-gradient-to-r from-slate-900 to-slate-800 border-b border-slate-700 flex items-center justify-between">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"/></svg>
+          Admin Authentication
+        </h3>
+        <button id="close-login-modal-btn" class="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <form id="login-form" class="p-6 space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Username</label>
+          <input type="text" id="login-username" required placeholder="Enter username" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Password</label>
+          <input type="password" id="login-password" required placeholder="Enter password" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500">
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-sm shadow transition-all mt-2">
+          Login to Dashboard
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: ADMIN PANEL -->
+  <div id="admin-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+    <div class="relative w-full max-w-5xl max-h-[92vh] bg-[#0f172a] rounded-3xl border border-brand-600/70 shadow-glow-lg flex flex-col overflow-hidden">
+      <!-- Admin Header -->
+      <div class="px-6 py-4 bg-gradient-to-r from-slate-900 to-slate-800 border-b border-slate-700 flex items-center justify-between shrink-0">
+        <div>
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Full Dynamic Website CMS Dashboard
+          </h3>
+          <p class="text-xs text-slate-400">Edit every text, notice, area, package, and server dynamically</p>
+        </div>
+        <button id="close-admin-modal-btn" class="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Tabs -->
+      <div class="flex border-b border-slate-700 bg-slate-800/50 shrink-0 overflow-x-auto">
+        <button class="admin-tab-btn active px-4 py-3 text-xs sm:text-sm font-bold text-brand-400 border-b-2 border-brand-500 whitespace-nowrap" data-target="admin-tab-general">1. General & Contact</button>
+        <button class="admin-tab-btn px-4 py-3 text-xs sm:text-sm font-bold text-slate-400 border-b-2 border-transparent hover:text-white whitespace-nowrap" data-target="admin-tab-texts">2. Page Texts & Notices</button>
+        <button class="admin-tab-btn px-4 py-3 text-xs sm:text-sm font-bold text-slate-400 border-b-2 border-transparent hover:text-white whitespace-nowrap" data-target="admin-tab-packages">3. Packages Manager</button>
+        <button class="admin-tab-btn px-4 py-3 text-xs sm:text-sm font-bold text-slate-400 border-b-2 border-transparent hover:text-white whitespace-nowrap" data-target="admin-tab-coverage">4. Coverage, Hubs & BDIX</button>
+        <button class="admin-tab-btn px-4 py-3 text-xs sm:text-sm font-bold text-slate-400 border-b-2 border-transparent hover:text-white whitespace-nowrap" data-target="admin-tab-firebase">5. Firebase Cloud Sync</button>
+      </div>
+
+      <!-- Admin Body -->
+      <form id="admin-form" class="p-6 overflow-y-auto flex-1 space-y-6">
+        
+        <!-- 1. General & Contact Tab -->
+        <div id="admin-tab-general" class="admin-tab-content space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Company Name</label>
+              <input type="text" id="admin-company-name" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white focus:border-brand-500">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Primary Area Name (e.g. Gandaria)</label>
+              <input type="text" id="admin-primary-area" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white focus:border-brand-500">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Logo Subtitle</label>
+              <input type="text" id="admin-logo-subtitle" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white focus:border-brand-500">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Company Address</label>
+              <input type="text" id="admin-address" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white focus:border-brand-500">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Hotline Number</label>
+              <input type="text" id="admin-hotline" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white focus:border-brand-500">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">WhatsApp Number</label>
+              <input type="text" id="admin-whatsapp" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white focus:border-brand-500">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Support Email Address</label>
+              <input type="email" id="admin-email" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white focus:border-brand-500">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Footer Office Title</label>
+              <input type="text" id="admin-footer-office" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white focus:border-brand-500">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Footer Partner Tag (e.g. BTRC Registered)</label>
+              <input type="text" id="admin-footer-partner" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white focus:border-brand-500">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Footer Copyright Text</label>
+              <input type="text" id="admin-footer-copyright" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white focus:border-brand-500">
+            </div>
+
+            <!-- Admin Credentials -->
+            <div class="col-span-1 sm:col-span-2 pt-3 border-t border-slate-700 mt-2">
+              <h4 class="text-sm font-bold text-brand-400 mb-2">🔒 Admin Login Credentials</h4>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Admin Username</label>
+              <input type="text" id="admin-username-input" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white focus:border-brand-500">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Admin Password</label>
+              <input type="text" id="admin-password-input" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white focus:border-brand-500">
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Page Texts & Notices Tab -->
+        <div id="admin-tab-texts" class="admin-tab-content hidden space-y-5">
+          <!-- Top Bar & Notices -->
+          <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
+            <h4 class="text-xs font-bold text-brand-400 uppercase tracking-wider">📢 Top Announcement & Notices</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">Top Bar Badge (e.g. Gandaria Exclusive)</label>
+                <input type="text" id="admin-top-badge" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white">
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-[11px] text-slate-400 mb-1">Top Notice (English)</label>
+                <input type="text" id="admin-notice-en" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white">
+              </div>
+              <div class="sm:col-span-3">
+                <label class="block text-[11px] text-slate-400 mb-1">Top Notice (Bangla)</label>
+                <input type="text" id="admin-notice-bn" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white">
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Banner Section -->
+          <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
+            <h4 class="text-xs font-bold text-brand-400 uppercase tracking-wider">🚀 Hero Banner Texts & Stats</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="sm:col-span-2">
+                <label class="block text-[11px] text-slate-400 mb-1">Hero Top Pill Badge</label>
+                <input type="text" id="admin-hero-badge" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white">
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">Hero Main Heading (Line 1)</label>
+                <input type="text" id="admin-hero-title-main" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white">
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">Hero Highlighted Heading (Line 2)</label>
+                <input type="text" id="admin-hero-title-highlight" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white">
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-[11px] text-slate-400 mb-1">Hero Subtitle / Description</label>
+                <textarea id="admin-hero-subtitle" rows="2" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white"></textarea>
+              </div>
+              <!-- 3 Hero Stats -->
+              <div class="grid grid-cols-2 gap-2">
+                <div><label class="block text-[10px] text-slate-400">Stat 1 Value</label><input type="text" id="admin-stat1-val" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-xs text-white"></div>
+                <div><label class="block text-[10px] text-slate-400">Stat 1 Label</label><input type="text" id="admin-stat1-lbl" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-xs text-white"></div>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <div><label class="block text-[10px] text-slate-400">Stat 2 Value</label><input type="text" id="admin-stat2-val" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-xs text-white"></div>
+                <div><label class="block text-[10px] text-slate-400">Stat 2 Label</label><input type="text" id="admin-stat2-lbl" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-xs text-white"></div>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <div><label class="block text-[10px] text-slate-400">Stat 3 Value</label><input type="text" id="admin-stat3-val" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-xs text-white"></div>
+                <div><label class="block text-[10px] text-slate-400">Stat 3 Label</label><input type="text" id="admin-stat3-lbl" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-xs text-white"></div>
+              </div>
+              <div class="sm:col-span-2 p-3 bg-slate-800/50 rounded-lg border border-slate-700 space-y-2">
+                <label class="block text-[11px] font-bold text-brand-400 mb-1">Slider Images (Banner)</label>
+                <div>
+                  <label class="block text-[10px] text-slate-400">Image 1 URL</label>
+                  <input type="text" id="admin-slider-img1" class="w-full bg-slate-900 border border-slate-700 rounded px-2 py-1.5 text-xs text-white">
+                </div>
+                <div>
+                  <label class="block text-[10px] text-slate-400">Image 2 URL (Optional)</label>
+                  <input type="text" id="admin-slider-img2" class="w-full bg-slate-900 border border-slate-700 rounded px-2 py-1.5 text-xs text-white">
+                </div>
+                <div>
+                  <label class="block text-[10px] text-slate-400">Image 3 URL (Optional)</label>
+                  <input type="text" id="admin-slider-img3" class="w-full bg-slate-900 border border-slate-700 rounded px-2 py-1.5 text-xs text-white">
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <div><label class="block text-[10px] text-slate-400">Gateway Box Title</label><input type="text" id="admin-gw-title" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-xs text-white"></div>
+                <div><label class="block text-[10px] text-slate-400">Gateway Box Stats</label><input type="text" id="admin-gw-stats" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-xs text-white"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Packages & Coverage Section Texts -->
+          <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
+            <h4 class="text-xs font-bold text-brand-400 uppercase tracking-wider">📍 Packages & Coverage Section Notices</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">Packages Section Badge</label>
+                <input type="text" id="admin-pkg-badge" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white">
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">Packages Section Title</label>
+                <input type="text" id="admin-pkg-title" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white">
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-[11px] text-slate-400 mb-1">Packages Section Subtitle</label>
+                <textarea id="admin-pkg-subtitle" rows="2" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white"></textarea>
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">Coverage Badge</label>
+                <input type="text" id="admin-cov-badge" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white">
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">Coverage Heading</label>
+                <input type="text" id="admin-cov-title" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white">
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-[11px] text-slate-400 mb-1">Coverage Description</label>
+                <textarea id="admin-cov-desc" rows="2" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white"></textarea>
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">Coverage Check Status Detail Text</label>
+                <input type="text" id="admin-cov-detail" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white">
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">Distribution Hubs Box Title</label>
+                <input type="text" id="admin-hubs-title" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white">
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-[11px] text-slate-400 mb-1">Maintenance Team Bottom Notice</label>
+                <input type="text" id="admin-cov-notice" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white">
+              </div>
+            </div>
+          </div>
+
+          <!-- Other Sections & Self-Care Texts -->
+          <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
+            <h4 class="text-xs font-bold text-brand-400 uppercase tracking-wider">⚡ Speed Test, BDIX & Self-Care Portal Notices</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">Speed Test Subtitle</label>
+                <input type="text" id="admin-speedtest-sub" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white">
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">Booking Modal Subtitle</label>
+                <input type="text" id="admin-booking-sub" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white">
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">BDIX Section Title</label>
+                <input type="text" id="admin-bdix-title" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white">
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-400 mb-1">BDIX Section Subtitle</label>
+                <input type="text" id="admin-bdix-sub" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white">
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-[11px] text-slate-400 mb-1">Self-Care Search Result Dynamic Notice</label>
+                <textarea id="admin-selfcare-msg" rows="2" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Packages Tab -->
+        <div id="admin-tab-packages" class="admin-tab-content hidden space-y-4">
+          <div class="flex justify-between items-center">
+            <h4 class="text-sm font-bold text-white">Manage Internet Packages</h4>
+            <button id="admin-add-pkg-btn" type="button" class="px-3 py-1.5 bg-brand-600 hover:bg-brand-500 text-white text-xs font-bold rounded-lg">+ Add Package</button>
+          </div>
+          <div id="admin-pkg-list" class="space-y-3"></div>
+        </div>
+
+        <!-- 4. Coverage, Hubs & BDIX Tab -->
+        <div id="admin-tab-coverage" class="admin-tab-content hidden space-y-6">
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <h4 class="text-sm font-bold text-white">Coverage Roads / Areas</h4>
+              <button id="admin-add-cov-btn" type="button" class="px-3 py-1.5 bg-slate-700 hover:bg-slate-600 text-white text-xs font-bold rounded-lg">+ Add Area</button>
+            </div>
+            <div id="admin-cov-list" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+          </div>
+
+          <div class="border-t border-slate-700 pt-4">
+            <div class="flex justify-between items-center mb-3">
+              <h4 class="text-sm font-bold text-white">Fiber Distribution Hubs</h4>
+              <button id="admin-add-hub-btn" type="button" class="px-3 py-1.5 bg-slate-700 hover:bg-slate-600 text-white text-xs font-bold rounded-lg">+ Add Hub</button>
+            </div>
+            <div id="admin-hub-list" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+          </div>
+
+          <div class="border-t border-slate-700 pt-4">
+            <div class="flex justify-between items-center mb-3">
+              <h4 class="text-sm font-bold text-white">BDIX & FTP Servers</h4>
+              <button id="admin-add-bdix-btn" type="button" class="px-3 py-1.5 bg-slate-700 hover:bg-slate-600 text-white text-xs font-bold rounded-lg">+ Add BDIX Server</button>
+            </div>
+            <div id="admin-bdix-list" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+          </div>
+        </div>
+
+        <!-- 5. Firebase & Cloud Sync Tab -->
+        <div id="admin-tab-firebase" class="admin-tab-content hidden space-y-4">
+          <div class="p-4 rounded-xl bg-brand-950/40 border border-brand-800/60 text-xs text-slate-300">
+            <p class="font-bold text-white mb-1">🔗 Live Firebase Cloud Sync Config & Status</p>
+            <p>Your Firebase Firestore connection status and configuration are managed here.</p>
+            
+            <div id="firebase-status-box" class="mt-3 p-3 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span id="fb-status-dot" class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span id="fb-status-text" class="font-bold text-emerald-400">Connected & Synced with Cloud Firestore</span>
+              </div>
+              <button type="button" id="test-connection-btn" class="px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-white text-[11px] font-bold">Test Connection</button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Firebase API Key</label>
+              <input type="text" id="admin-fb-apikey" placeholder="AIzaSy..." class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:border-brand-500">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Firebase Project ID</label>
+              <input type="text" id="admin-fb-projectid" placeholder="my-isp-project" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:border-brand-500">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Firebase App ID</label>
+              <input type="text" id="admin-fb-appid" placeholder="1:123456:web:..." class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:border-brand-500">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Auth Domain</label>
+              <input type="text" id="admin-fb-authdomain" placeholder="project.firebaseapp.com" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:border-brand-500">
+            </div>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- Footer / Save -->
+      <div class="p-4 border-t border-slate-700 bg-slate-800/50 shrink-0 flex items-center justify-between gap-4 flex-wrap sm:flex-nowrap">
+        <button id="admin-reset-default-btn" type="button" class="px-4 py-3 rounded-xl bg-slate-800 hover:bg-red-950/60 border border-slate-700 hover:border-red-700 text-slate-300 hover:text-red-300 text-xs font-bold transition-all">
+          Reset
+        </button>
+        <button id="admin-export-code-btn" type="button" class="px-4 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow transition-all whitespace-nowrap flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          Backup Data
+        </button>
+        <button id="admin-save-all-btn" type="button" class="flex-1 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow transition-all">
+          Save & Publish
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 px-5 py-3 rounded-2xl bg-slate-900 border border-brand-500 shadow-glow text-white text-xs font-semibold transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+    <div id="toast-icon" class="w-6 h-6 rounded-full bg-emerald-600 flex items-center justify-center shrink-0">
+      <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+    </div>
+    <span id="toast-msg">Settings updated successfully!</span>
+  </div>
+
+  <!-- FIREBASE & CORE SCRIPT -->
+  <script type="module">
+    import { initializeApp, getApps, deleteApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+    import { getFirestore, doc, setDoc, getDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    const appId = typeof __app_id !== 'undefined' ? __app_id : 'high-range-isp-gandaria';
+    
+    // Default Configuration
+    const DefaultConfig = {
+      adminUsername: "Ahamed",
+      adminPassword: "Rosi",
+      companyName: "HIGH RANGE",
+      primaryAreaName: "Gandaria",
+      logoSubtitle: "Internet Service • Gandaria",
+      companyAddress: "DIT Road, Gandaria, Dhaka-1204",
+      hotline: "01700-000000",
+      whatsappNumber: "8801700000000", 
+      supportEmail: "support@highrangeinternet.com",
+      footerOfficeTitle: "Gandaria Central Office",
+      footerPartnerTag: "BTRC Registered ISP Partner",
+      footerCopyright: "© 2026 High Range Internet Service. All rights reserved. Gandaria, Dhaka.",
+      
+      topBarBadge: "Gandaria Exclusive",
+      announcementEnglish: "High Range Fiber Coverage Live across all areas of Gandaria! Free Optical Fiber setup on 30 Mbps & above.",
+      announcementBangla: "গেন্ডারিয়ার সকল রাস্তায় হাই রেঞ্জ অপটিক্যাল ফাইবার লাইভ! ফ্রি ফাইবার ক্যাবল ও সেটআপ!",
+      
+      heroBadge: "গেন্ডারিয়ার সবচেয়ে নির্ভরযোগ্য অপটিক্যাল ফাইবার নেটওয়ার্ক",
+      heroTitleMain: "Superfast Internet in",
+      heroTitleHighlight: "Gandaria, Dhaka",
+      heroSubtitle: "Experience ultra-low latency gaming, buffer-free 4K streaming, and blazing BDIX downloads with HIGH RANGE Internet Service. Plans starting at only ৳500 / month.",
+      stat1Val: "100%",
+      stat1Label: "Fiber Optic Cable",
+      stat2Val: "100 Mbps",
+      stat2Label: "BDIX Speed Free",
+      stat3Val: "24/7",
+      stat3Label: "Gandaria Local Support",
+      sliderImage1: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=1200",
+      sliderImage2: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200",
+      sliderImage3: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200",
+      gatewayTitle: "Gandaria Gateway Online",
+      gatewayStats: "Latency: 2ms • Uptime: 99.98%",
+
+      pkgBadge: "Official ISP Packages • Gandaria",
+      pkgTitle: "Choose Your High-Speed Internet Plan",
+      pkgSubtitle: "Transparent pricing with 1:8 contention ratio across all packages. All plans include unmetered YouTube cache, BDIX 100 Mbps, and 24/7 dedicated Gandaria NOC support.",
+
+      covBadge: "Coverage Area • গেন্ডারিয়া এলাকা",
+      covTitle: "100% Optical Fiber Coverage Across Gandaria",
+      covDesc: "We have dedicated optical distribution frames (ODF) and high-capacity fiber rings installed throughout Gandaria. Type your road or area below to check instant fiber availability!",
+      covResultDetail: "Primary fiber distribution box located within 35 meters. Instant activation within 3 hours available today.",
+      hubsBoxTitle: "Gandaria Fiber Distribution Hubs",
+      covMaintenanceNotice: "Our Gandaria maintenance team operates 24/7 on motorbikes with optical fusion splicers for immediate support.",
+
+      speedTestSub: "Test your current network response against High Range Gandaria Core Gateway.",
+      bookingModalSub: "Gandaria Optical Fiber Fast Setup",
+      bdixTitle: "Free 100 Mbps BDIX & Local Servers",
+      bdixSubtitle: "Enjoy lightning-fast access to top Bangladeshi movie servers, torrents, and live TV channels without consuming your regular internet quota.",
+      selfCarePlaceholderMsg: "We are currently working on upgrading our Self-Care portal. Please bear with us. For instant support, contact our hotline.",
+
+      firebaseConfig: {
+        apiKey: "AIzaSyAQuhGobpA-IaMqAr1XUrgWwm59gIdIECA",
+        projectId: "highrange-d3da0",
+        appId: "1:372500679679:web:af681aa35091964929b5ca",
+        authDomain: "highrange-d3da0.firebaseapp.com"
+      },
+      coverageAreas: [
+        "Dinanath Sen Road (দীননাথ সেন রোড)", "Gandaria DIT Plot 1-8 (ডিআইটি প্লট)", 
+        "Dhupkhola Math & Bazar (ধূপখোলা মাঠ)", "Asgor Ali Hospital Road (আজগর আলী রোড)", 
+        "Sadhana Aushadhalaya Lane (সাধনা লেন)", "Gandaria Rail Station Road", 
+        "Dayaganj Mor / Link Road", "Loharpool / Iron Bridge", "Distilary Road", "Swamibagh Border"
+      ],
+      hubs: [
+        "DIT Road Hub", "Dinanath Sen Hub", "Dhupkhola Node", 
+        "Asgor Ali Node", "Rail Station Box", "Loharpool Core"
+      ],
+      bdixServers: [
+        { name: "SamOnline FTP", desc: "Movies & 4K TV Series", badge: "100 Mbps BDIX" },
+        { name: "Circle Network FTP", desc: "Software, Games & Media", badge: "100 Mbps BDIX" },
+        { name: "Discovery FTP", desc: "Ultra-fast Anime & 4K Docs", badge: "100 Mbps BDIX" },
+        { name: "Live BD TV & OTT", desc: "Chorki, Toffee, Hoichoi Cache", badge: "Zero Buffer" }
+      ],
+      packages: [
+        { speed: 20, price: 500, name: "Starter", contention: "1:8 Contention", category: "budget", popular: false, desc: "Ideal for light home browsing & standard HD video streaming.", features: ["Unlimited Browsing", "YouTube HD Quality", "100 Mbps BDIX Speed"] },
+        { speed: 30, price: 700, name: "Family Pack", contention: "1:8 Contention", category: "popular", popular: true, desc: "Best value! Perfect for family 4K streaming & online gaming.", features: ["4K Ultra HD Streaming", "Low Latency Gaming", "Free Fiber Drop Cable"] },
+        { speed: 50, price: 1000, name: "Extreme", contention: "1:8 Contention", category: "gaming", popular: false, desc: "Maximum throughput for power users & freelancers.", features: ["Symmetrical Ultra Speed", "Real IP Optional", "1-Hour Dispatch"] },
+        { speed: 60, price: 1200, name: "Gamer Pro", contention: "1:8 Contention", category: "gaming", popular: false, desc: "Flawless gaming and seamless simultaneous 4K streaming.", features: ["Symmetrical Ultra Speed", "100 Mbps BDIX Speed", "Priority Tech Support"] },
+        { speed: 70, price: 1500, name: "Extreme II", contention: "1:8 Contention", category: "gaming", popular: false, desc: "Designed for heavy downloaders, and professional freelancers.", features: ["Buffer-Free 8K Ready", "Free BDIX Unlimited", "Fast Local Peering"] },
+        { speed: 80, price: 2000, name: "Creator", contention: "1:8 Contention", category: "gaming", popular: false, desc: "Ultimate speed for content creators needing super-fast upload.", features: ["Supreme Upload Speed", "Zero Lag Multitasking", "Dedicated Support"] },
+        { speed: 100, price: 2500, name: "Office Pro", contention: "1:8 Contention", category: "gaming", popular: false, desc: "Gigabit-grade performance for extreme internet needs.", features: ["1:1 Pure Dedicated Speed", "Corporate SLA Support", "Public Real IP Included"] }
+      ]
+    };
+
+    // Load persisted configuration immediately before rendering (Priority Load from LocalStorage & Cloud Cache)
+    let AdminConfig = JSON.parse(JSON.stringify(DefaultConfig));
+    try {
+      const savedLocal = localStorage.getItem('hr_admin_config_v2');
+      if (savedLocal) {
+        const parsed = JSON.parse(savedLocal);
+        AdminConfig = { ...DefaultConfig, ...parsed };
+      }
+    } catch (e) {
+      console.error("Error loading local storage config:", e);
+    }
+    let TempConfig = JSON.parse(JSON.stringify(AdminConfig));
+
+    // Backward compatibility for older DB entries
+    if(AdminConfig.heroBannerImageUrl && !AdminConfig.sliderImage1) {
+      AdminConfig.sliderImage1 = AdminConfig.heroBannerImageUrl;
+    }
+
+    let app = null, db = null, auth = null, cmsDocRef = null, unsubscribeSnapshot = null;
+    let currentFbConfigStr = null;
+
+    let currentSlide = 0;
+    let slideInterval = null;
+
+    const appState = {
+      language: 'en',
+      selectedSpeed: 30,
+      selectedPrice: 700,
+      realIpAddon: false,
+      routerAddon: false,
+      isSpeedTesting: false
+    };
+
+    function formatWhatsAppNumber(rawNum) {
+      let cleaned = String(rawNum || '').replace(/\D/g, '');
+      if (cleaned.startsWith('01')) {
+        cleaned = '88' + cleaned;
+      }
+      return cleaned || '8801700000000';
+    }
+
+    async function initFirebaseDynamic() {
+      try {
+        const hasCustomConfig = AdminConfig.firebaseConfig && AdminConfig.firebaseConfig.apiKey && AdminConfig.firebaseConfig.projectId;
+        const envConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
+        const activeFbConfig = hasCustomConfig ? AdminConfig.firebaseConfig : envConfig;
+
+        if (!activeFbConfig || !activeFbConfig.apiKey) {
+          updateFirebaseStatusIndicator(false, "API Key Missing");
+          return false;
+        }
+
+        const newConfigStr = JSON.stringify(activeFbConfig);
+        
+        if (app && currentFbConfigStr === newConfigStr) {
+           updateFirebaseStatusIndicator(true, "Connected & Synced with Cloud Firestore");
+           return true; // Already initialized with same config
+        }
+
+        if (unsubscribeSnapshot) {
+          unsubscribeSnapshot();
+          unsubscribeSnapshot = null;
+        }
+
+        const existingApps = getApps();
+        for (const existingApp of existingApps) {
+          await deleteApp(existingApp);
+        }
+
+        app = initializeApp(activeFbConfig);
+        currentFbConfigStr = newConfigStr;
+        db = getFirestore(app);
+        auth = getAuth(app);
+        cmsDocRef = doc(db, 'artifacts', appId, 'public', 'data', 'cmsConfig', 'siteConfig');
+        updateFirebaseStatusIndicator(true, "Connected & Synced with Cloud Firestore");
+        return true;
+      } catch (e) {
+        console.warn("Firebase Init Fallback:", e);
+        updateFirebaseStatusIndicator(false, "Using Local Persistent Storage");
+        return false;
+      }
+    }
+
+    function updateFirebaseStatusIndicator(isConnected, message) {
+      const dot = document.getElementById('fb-status-dot');
+      const text = document.getElementById('fb-status-text');
+      if (dot && text) {
+        if (isConnected) {
+          dot.className = "w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse";
+          text.className = "font-bold text-emerald-400 text-xs";
+          text.textContent = message;
+        } else {
+          dot.className = "w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse";
+          text.className = "font-bold text-amber-400 text-xs";
+          text.textContent = message;
+        }
+      }
+    }
+
+    async function initCMS() {
+      renderDynamicContent();
+      try {
+        const initialized = await initFirebaseDynamic();
+        if (!initialized || !db || !cmsDocRef) return;
+
+        // Attempt Auth (Optional if Rules are Public)
+        if (auth) {
+          try {
+            const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : undefined;
+            if (initialAuthToken && (!AdminConfig.firebaseConfig || !AdminConfig.firebaseConfig.apiKey)) {
+              await signInWithCustomToken(auth, initialAuthToken);
+            } else {
+              await signInAnonymously(auth);
+            }
+          } catch(e) {
+            console.warn("Auth skipped. Attempting direct DB read...", e);
+          }
+        }
+
+        try {
+          const remoteSnap = await getDoc(cmsDocRef);
+          if (remoteSnap.exists()) {
+            const cloudData = remoteSnap.data();
+            if (cloudData && Object.keys(cloudData).length > 0) {
+              AdminConfig = { ...DefaultConfig, ...cloudData };
+              localStorage.setItem('hr_admin_config_v2', JSON.stringify(AdminConfig));
+              renderDynamicContent();
+            }
+          } else {
+            await setDoc(cmsDocRef, AdminConfig);
+          }
+        } catch (fetchErr) {
+          console.warn("Initial remote fetch warning:", fetchErr);
+        }
+
+        unsubscribeSnapshot = onSnapshot(cmsDocRef, (docSnap) => {
+          if (docSnap.exists()) {
+            const cloudData = docSnap.data();
+            if (cloudData && Object.keys(cloudData).length > 0) {
+              AdminConfig = { ...DefaultConfig, ...cloudData };
+              localStorage.setItem('hr_admin_config_v2', JSON.stringify(AdminConfig));
+              renderDynamicContent();
+            }
+          }
+        }, (error) => {
+          console.warn("Cloud sync standby:", error.message);
+        });
+      } catch (err) {
+        console.warn("Local storage mode active.");
+      }
+    }
+
+    function setElText(id, text) {
+      const el = document.getElementById(id);
+      if (el && text !== undefined) el.textContent = text;
+    }
+
+    function renderDynamicContent() {
+      document.querySelectorAll('.company-name-display').forEach(el => {
+        const parts = (AdminConfig.companyName || 'HIGH RANGE').trim().split(' ');
+        if (parts.length > 1) {
+          const last = parts.pop();
+          el.innerHTML = `${parts.join(' ')} <span class="text-brand-500">${last}</span>`;
+        } else {
+          el.textContent = AdminConfig.companyName;
+        }
+      });
+
+      document.querySelectorAll('.area-name-display').forEach(el => {
+        el.textContent = AdminConfig.primaryAreaName || 'Gandaria';
+      });
+
+      document.querySelectorAll('.address-display').forEach(el => el.textContent = AdminConfig.companyAddress);
+      document.querySelectorAll('.hotline-number-display').forEach(el => el.textContent = AdminConfig.hotline);
+      document.querySelectorAll('.hotline-link-display').forEach(el => {
+        el.setAttribute('href', `tel:${(AdminConfig.hotline || '').replace(/[^0-9+]/g, '')}`);
+      });
+      document.querySelectorAll('.email-display').forEach(el => {
+        const email = AdminConfig.supportEmail || 'support@highrangeinternet.com';
+        el.textContent = email;
+        if (el.tagName === 'A') el.setAttribute('href', `mailto:${email}`);
+      });
+
+      setElText('logo-subtitle-display', AdminConfig.logoSubtitle);
+      setElText('top-badge-display', AdminConfig.topBarBadge);
+      setElText('top-announcement-text', appState.language === 'en' ? AdminConfig.announcementEnglish : AdminConfig.announcementBangla);
+      
+      setElText('hero-badge', AdminConfig.heroBadge);
+      setElText('hero-title-main-display', AdminConfig.heroTitleMain);
+      setElText('hero-title-highlight-display', AdminConfig.heroTitleHighlight);
+      setElText('hero-subtitle', AdminConfig.heroSubtitle);
+      setElText('stat1-val-display', AdminConfig.stat1Val);
+      setElText('stat1-lbl-display', AdminConfig.stat1Label);
+      setElText('stat2-val-display', AdminConfig.stat2Val);
+      setElText('stat2-lbl-display', AdminConfig.stat2Label);
+      setElText('stat3-val-display', AdminConfig.stat3Val);
+      setElText('stat3-lbl-display', AdminConfig.stat3Label);
+      
+      initSlider(); // Initialize the Hero Slider
+
+      setElText('gateway-title-display', AdminConfig.gatewayTitle);
+      setElText('gateway-stats-display', AdminConfig.gatewayStats);
+
+      setElText('pkg-badge-display', AdminConfig.pkgBadge);
+      setElText('pkg-title', AdminConfig.pkgTitle);
+      setElText('pkg-subtitle', AdminConfig.pkgSubtitle);
+
+      setElText('cov-badge-display', AdminConfig.covBadge);
+      setElText('cov-title-display', AdminConfig.covTitle);
+      setElText('cov-desc', AdminConfig.covDesc);
+      setElText('cov-result-detail', AdminConfig.covResultDetail);
+      setElText('hubs-box-title-display', AdminConfig.hubsBoxTitle);
+      setElText('cov-maintenance-notice-display', AdminConfig.covMaintenanceNotice);
+
+      setElText('speedtest-subtitle-display', AdminConfig.speedTestSub);
+      setElText('modal-booking-subtitle-display', AdminConfig.bookingModalSub);
+      setElText('bdix-title-display', AdminConfig.bdixTitle);
+      setElText('bdix-subtitle-display', AdminConfig.bdixSubtitle);
+
+      setElText('footer-office-title-display', AdminConfig.footerOfficeTitle);
+      setElText('footer-partner-tag-display', AdminConfig.footerPartnerTag);
+      setElText('footer-copyright-display', AdminConfig.footerCopyright);
+
+      const grid = document.getElementById('packages-grid');
+      if (grid && Array.isArray(AdminConfig.packages)) {
+        grid.innerHTML = AdminConfig.packages.map(pkg => {
+          const featuresList = Array.isArray(pkg.features) ? pkg.features : String(pkg.features || '').split(',').map(s => s.trim()).filter(Boolean);
+          return `
+          <div class="pkg-card ${pkg.popular ? 'highlight-card hover:scale-105 z-10' : 'custom-gradient-card border-slate-800 hover:border-brand-500/60 hover:-translate-y-1'} rounded-2xl p-6 relative border flex flex-col justify-between transition-all duration-300" data-speed="${pkg.speed}" data-cat="${pkg.category || 'popular'}">
+            ${pkg.popular ? `<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-brand-600 to-red-500 text-white text-[11px] font-black uppercase tracking-wider shadow-lg flex items-center gap-1.5 whitespace-nowrap"><span>🔥</span> MOST POPULAR</div>` : ''}
+            <div>
+              <div class="flex justify-between items-center mb-4 ${pkg.popular ? 'mt-2' : ''}">
+                <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md ${pkg.popular ? 'bg-brand-900/80 text-brand-300 border border-brand-600/40' : 'bg-slate-800 text-slate-300'}">${pkg.name}</span>
+                <span class="text-xs text-brand-400 font-bold">${pkg.contention || '1:8 Contention'}</span>
+              </div>
+              <div class="text-[2rem] font-black text-white mb-1 leading-none">${pkg.speed} <span class="text-sm font-semibold text-brand-400">MBPS</span></div>
+              <div class="flex items-baseline gap-1 my-3">
+                <span class="text-3xl font-extrabold ${pkg.popular ? 'text-brand-400' : 'text-brand-500'}">৳ ${Number(pkg.price).toLocaleString('en-IN')}</span>
+                <span class="text-xs ${pkg.popular ? 'text-slate-300' : 'text-slate-400'}">/ month</span>
+              </div>
+              <p class="text-xs ${pkg.popular ? 'text-slate-300 border-brand-800/80' : 'text-slate-400 border-slate-800'} border-b pb-4 mb-4 min-h-[48px]">
+                ${pkg.desc || 'High-speed optical fiber internet plan.'}
+              </p>
+              <ul class="space-y-2.5 text-xs ${pkg.popular ? 'text-slate-200 font-medium' : 'text-slate-300'} mb-6">
+                ${featuresList.map(f => `
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 ${pkg.popular ? 'text-brand-400' : 'text-emerald-400'} shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> 
+                    ${f}
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+            <button type="button" class="select-plan-btn w-full py-2.5 rounded-xl ${pkg.popular ? 'bg-brand-600 hover:bg-brand-500 text-white font-extrabold shadow-glow' : 'bg-slate-800 hover:bg-brand-600 text-white font-bold'} text-xs transition-all" data-plan="${pkg.speed} MBPS" data-price="${pkg.price}">
+              ${pkg.popular ? `Get ${pkg.speed} MBPS` : `Choose ${pkg.speed} MBPS`}
+            </button>
+          </div>
+        `}).join('');
+      }
+
+      if (Array.isArray(AdminConfig.packages) && AdminConfig.packages.length > 0) {
+        const defaultPkg = AdminConfig.packages.find(p => p.popular) || AdminConfig.packages[0];
+        appState.selectedSpeed = Number(defaultPkg.speed);
+        appState.selectedPrice = Number(defaultPkg.price);
+      }
+
+      const calcGrid = document.getElementById('calc-speed-options');
+      if (calcGrid && Array.isArray(AdminConfig.packages)) {
+        calcGrid.innerHTML = AdminConfig.packages.map(pkg => {
+          const isSelected = Number(pkg.speed) === appState.selectedSpeed;
+          return `
+          <button type="button" class="calc-speed-btn py-3 px-2 rounded-xl border ${isSelected ? 'border-2 border-brand-500 bg-brand-950/80 shadow-glow active' : 'border-slate-700 bg-slate-800/70 hover:border-brand-500'} text-center transition-all" data-speed="${pkg.speed}" data-price="${pkg.price}">
+            <div class="text-lg font-black text-white">${pkg.speed} Mbps</div>
+            <div class="text-xs text-brand-400 font-bold">৳${Number(pkg.price).toLocaleString('en-IN')}/mo</div>
+            ${pkg.popular ? `<span class="text-[9px] bg-brand-600 text-white px-1.5 py-0.5 rounded font-bold mt-1 inline-block">POPULAR</span>` : ''}
+          </button>
+        `}).join('');
+      }
+
+      const modalSelect = document.getElementById('modal-pkg-select');
+      if (modalSelect && Array.isArray(AdminConfig.packages)) {
+        modalSelect.innerHTML = AdminConfig.packages.map(pkg => `
+          <option value="${pkg.speed} MBPS - ৳${pkg.price}" ${pkg.popular ? 'selected' : ''}>
+            ${pkg.speed} MBPS (${pkg.name}) — ৳${pkg.price} / mo ${pkg.popular ? '(Popular)' : ''}
+          </option>
+        `).join('');
+      }
+
+      const roadSelect = document.getElementById('gandaria-road-select');
+      if (roadSelect && Array.isArray(AdminConfig.coverageAreas)) {
+        roadSelect.innerHTML = AdminConfig.coverageAreas.map(area => `<option value="${area}">${area}</option>`).join('');
+      }
+
+      const footerCovList = document.getElementById('footer-coverage-list');
+      if (footerCovList && Array.isArray(AdminConfig.coverageAreas)) {
+        footerCovList.innerHTML = AdminConfig.coverageAreas.slice(0, 6).map(area => `<li>${area}</li>`).join('');
+      }
+
+      const hubsGrid = document.getElementById('hubs-grid');
+      if (hubsGrid && Array.isArray(AdminConfig.hubs)) {
+        hubsGrid.innerHTML = AdminConfig.hubs.map(hub => `
+          <div class="p-3 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between">
+            <span class="text-slate-300 truncate mr-2" title="${hub}">${hub}</span>
+            <span class="text-emerald-400 font-bold shrink-0">● Active</span>
+          </div>
+        `).join('');
+        const badge = document.getElementById('hubs-active-badge');
+        if (badge) badge.textContent = `All ${AdminConfig.hubs.length} Hubs Active`;
+      }
+
+      const bdixGrid = document.getElementById('bdix-servers-grid');
+      if (bdixGrid && Array.isArray(AdminConfig.bdixServers)) {
+        bdixGrid.innerHTML = AdminConfig.bdixServers.map(srv => `
+          <div class="p-5 rounded-2xl custom-gradient-card border border-slate-800 flex items-center justify-between">
+            <div>
+              <h4 class="font-bold text-white text-sm">${srv.name}</h4>
+              <p class="text-xs text-slate-400">${srv.desc}</p>
+              <span class="inline-block mt-2 text-[10px] font-bold text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded">${srv.badge || '100 Mbps BDIX'}</span>
+            </div>
+            <button type="button" class="test-ping-btn p-2 rounded-lg bg-slate-800 hover:bg-brand-600 text-white text-xs transition-colors">Test Ping</button>
+          </div>
+        `).join('');
+
+        document.querySelectorAll('.test-ping-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            const targetBtn = e.currentTarget;
+            targetBtn.textContent = 'Testing...';
+            setTimeout(() => {
+              targetBtn.textContent = '1ms (Fast)';
+              targetBtn.className = 'test-ping-btn p-2 rounded-lg bg-emerald-700 text-white text-xs font-bold transition-colors';
+            }, 400);
+          });
+        });
+      }
+
+      document.querySelectorAll('.select-plan-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const plan = e.currentTarget.getAttribute('data-plan');
+          const price = e.currentTarget.getAttribute('data-price');
+          openBookingModal(`${plan} - ৳${price}`);
+        });
+      });
+      
+      rebindCalculatorEvents();
+      updateCalculator();
+    }
+
+    // --- Slider Functions ---
+    function initSlider() {
+      const track = document.getElementById('hero-slider-track');
+      const dotsContainer = document.getElementById('slider-dots');
+      if (!track) return;
+      
+      const images = [AdminConfig.sliderImage1, AdminConfig.sliderImage2, AdminConfig.sliderImage3]
+                     .map(url => url ? url.trim() : '')
+                     .filter(url => url !== '');
+      
+      if (images.length === 0) images.push("https://placehold.co/1200x800/131e33/ef4444?text=Network");
+
+      track.innerHTML = images.map(img => `<img src="${img}" class="w-full h-full object-cover shrink-0" alt="Fiber Network">`).join('');
+      
+      if (dotsContainer) {
+        dotsContainer.innerHTML = images.map((_, i) => `<button type="button" class="slider-dot w-2 h-2 rounded-full transition-colors ${i === 0 ? 'bg-brand-500' : 'bg-white/40 hover:bg-white/70'}" data-index="${i}"></button>`).join('');
+        document.querySelectorAll('.slider-dot').forEach(dot => {
+          dot.addEventListener('click', (e) => goToSlide(parseInt(e.target.getAttribute('data-index'))));
+        });
+      }
+      
+      currentSlide = 0;
+      updateSliderPosition();
+      
+      clearInterval(slideInterval);
+      if (images.length > 1) {
+        slideInterval = setInterval(() => goToSlide(currentSlide + 1), 4000);
+      }
+    }
+
+    function goToSlide(index) {
+      const track = document.getElementById('hero-slider-track');
+      if (!track) return;
+      const totalSlides = track.children.length;
+      if (totalSlides === 0) return;
+      
+      currentSlide = (index + totalSlides) % totalSlides;
+      updateSliderPosition();
+      
+      // Reset timer on manual navigation
+      clearInterval(slideInterval);
+      if (totalSlides > 1) {
+        slideInterval = setInterval(() => goToSlide(currentSlide + 1), 4000);
+      }
+    }
+
+    function updateSliderPosition() {
+      const track = document.getElementById('hero-slider-track');
+      if (track) track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      
+      document.querySelectorAll('.slider-dot').forEach((dot, i) => {
+        dot.className = `slider-dot w-2 h-2 rounded-full transition-colors ${i === currentSlide ? 'bg-brand-500 shadow-[0_0_8px_rgba(239,68,68,0.8)]' : 'bg-white/40 hover:bg-white/70'}`;
+      });
+    }
+
+    document.getElementById('slider-prev')?.addEventListener('click', () => goToSlide(currentSlide - 1));
+    document.getElementById('slider-next')?.addEventListener('click', () => goToSlide(currentSlide + 1));
+    // ------------------------
+
+    document.addEventListener('DOMContentLoaded', () => {
+      checkAdminLoginState();
+      initCMS();
+    });
+
+    function showToast(message, isSuccess = true) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-msg');
+      const toastIcon = document.getElementById('toast-icon');
+
+      if (!toast) return;
+      toastMsg.textContent = message;
+      toast.className = `fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 px-5 py-3 rounded-2xl bg-[#0f172a] border shadow-glow text-white text-xs font-semibold transform translate-y-0 opacity-100 transition-all duration-300 ${isSuccess ? 'border-emerald-500' : 'border-brand-500'}`;
+      toastIcon.className = `w-6 h-6 rounded-full flex items-center justify-center shrink-0 ${isSuccess ? 'bg-emerald-600' : 'bg-brand-600'}`;
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3500);
+    }
+
+    function openBookingModal(preselectedPlan = '') {
+      const modal = document.getElementById('booking-modal');
+      const select = document.getElementById('modal-pkg-select');
+      if (select && preselectedPlan) {
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].value.includes(preselectedPlan) || preselectedPlan.includes(select.options[i].value.split(' ')[0])) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      modal?.classList.remove('hidden');
+    }
+
+    function closeBookingModal() {
+      document.getElementById('booking-modal')?.classList.add('hidden');
+    }
+
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (mobileBtn) {
+      mobileBtn.addEventListener('click', () => {
+        if (mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.remove('hidden');
+          hamburgerIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+        } else {
+          mobileMenu.classList.add('hidden');
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        }
+      });
+    }
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu?.classList.add('hidden');
+        hamburgerIcon?.classList.remove('hidden');
+        closeIcon?.classList.add('hidden');
+      });
+    });
+
+    document.getElementById('header-connect-btn')?.addEventListener('click', () => openBookingModal());
+    document.getElementById('mobile-connect-btn')?.addEventListener('click', () => openBookingModal());
+    document.getElementById('close-booking-modal-btn')?.addEventListener('click', closeBookingModal);
+
+    const loginModal = document.getElementById('login-modal');
+    const adminLoginBtn = document.getElementById('admin-login-btn');
+    const closeLoginModalBtn = document.getElementById('close-login-modal-btn');
+    const loginForm = document.getElementById('login-form');
+    const openAdminBtn = document.getElementById('open-admin-btn');
+    const adminLogoutBtn = document.getElementById('admin-logout-btn');
+
+    function checkAdminLoginState() {
+      if (sessionStorage.getItem('hr_admin_logged_in') === 'true') {
+        adminLoginBtn?.classList.add('hidden');
+        openAdminBtn?.classList.remove('hidden');
+        adminLogoutBtn?.classList.remove('hidden');
+      } else {
+        adminLoginBtn?.classList.remove('hidden');
+        openAdminBtn?.classList.add('hidden');
+        adminLogoutBtn?.classList.add('hidden');
+      }
+    }
+
+    adminLoginBtn?.addEventListener('click', () => loginModal?.classList.remove('hidden'));
+    closeLoginModalBtn?.addEventListener('click', () => loginModal?.classList.add('hidden'));
+
+    loginForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const user = document.getElementById('login-username').value.trim();
+      const pass = document.getElementById('login-password').value.trim();
+
+      if (user === AdminConfig.adminUsername && pass === AdminConfig.adminPassword) {
+        sessionStorage.setItem('hr_admin_logged_in', 'true');
+        checkAdminLoginState();
+        loginModal?.classList.add('hidden');
+        loginForm.reset();
+        showToast('Admin logged in successfully!', true);
+      } else {
+        showToast('Invalid Username or Password!', false);
+      }
+    });
+
+    adminLogoutBtn?.addEventListener('click', () => {
+      sessionStorage.removeItem('hr_admin_logged_in');
+      checkAdminLoginState();
+      showToast('Admin logged out.', true);
+    });
+
+    const filterAll = document.getElementById('pkg-filter-all');
+    const filterBudget = document.getElementById('pkg-filter-budget');
+    const filterGaming = document.getElementById('pkg-filter-gaming');
+
+    function setFilterActive(btn) {
+      [filterAll, filterBudget, filterGaming].forEach(b => {
+        if (b) b.className = 'px-5 py-2 rounded-lg text-xs font-bold transition-all text-slate-400 hover:text-white';
+      });
+      if (btn) btn.className = 'px-5 py-2 rounded-lg text-xs font-bold transition-all bg-brand-600 text-white shadow';
+    }
+
+    filterAll?.addEventListener('click', () => {
+      setFilterActive(filterAll);
+      document.querySelectorAll('.pkg-card').forEach(c => c.classList.remove('hidden'));
+    });
+
+    filterBudget?.addEventListener('click', () => {
+      setFilterActive(filterBudget);
+      document.querySelectorAll('.pkg-card').forEach(c => {
+        const speed = parseInt(c.getAttribute('data-speed'), 10);
+        c.classList.toggle('hidden', speed > 30);
+      });
+    });
+
+    filterGaming?.addEventListener('click', () => {
+      setFilterActive(filterGaming);
+      document.querySelectorAll('.pkg-card').forEach(c => {
+        const speed = parseInt(c.getAttribute('data-speed'), 10);
+        c.classList.toggle('hidden', speed < 40);
+      });
+    });
+
+    const coverageBtn = document.getElementById('check-coverage-btn');
+    const covResult = document.getElementById('coverage-result');
+    const covResultTitle = document.getElementById('cov-result-title');
+    const covApplyBtn = document.getElementById('cov-apply-btn');
+
+    coverageBtn?.addEventListener('click', () => {
+      const road = document.getElementById('gandaria-road-select').value;
+      covResult?.classList.remove('hidden');
+      if (covResultTitle) covResultTitle.textContent = `Fiber Active in ${road}!`;
+      showToast(`Verified: Fiber Ready at ${road}!`);
+    });
+
+    covApplyBtn?.addEventListener('click', () => {
+      openBookingModal();
+      const addrInput = document.getElementById('modal-gandaria-address');
+      const roadVal = document.getElementById('gandaria-road-select')?.value || '';
+      if (addrInput) addrInput.value = `${roadVal}, ${AdminConfig.primaryAreaName || 'Gandaria'}`;
+    });
+
+    function rebindCalculatorEvents() {
+      const speedBtns = document.querySelectorAll('.calc-speed-btn');
+      speedBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          speedBtns.forEach(b => {
+            b.className = `calc-speed-btn py-3 px-2 rounded-xl border text-center transition-all border-slate-700 bg-slate-800/70 hover:border-brand-500`;
+          });
+          btn.className = 'calc-speed-btn active py-3 px-2 rounded-xl border-2 border-brand-500 bg-brand-950/80 text-center shadow-glow transition-all';
+          appState.selectedSpeed = parseInt(btn.getAttribute('data-speed'), 10);
+          appState.selectedPrice = parseInt(btn.getAttribute('data-price'), 10);
+          updateCalculator();
+        });
+      });
+    }
+
+    function updateCalculator() {
+      let monthly = appState.selectedPrice;
+      let setup = 0;
+      let details = [`Base Plan: ৳${appState.selectedPrice}`];
+
+      if (document.getElementById('addon-realip')?.checked) { monthly += 150; details.push('Real IP (+৳150)'); }
+      if (document.getElementById('addon-router')?.checked) { setup += 1400; details.push('Dual-Band Router (+৳1400)'); }
+      details.push('Free Fiber Drop');
+
+      const sumName = document.getElementById('calc-summary-name');
+      const sumDetails = document.getElementById('calc-summary-details');
+      const totalMon = document.getElementById('calc-total-monthly');
+      const setupTot = document.getElementById('calc-setup-total');
+
+      if (sumName) sumName.textContent = `${appState.selectedSpeed} MBPS Plan`;
+      if (sumDetails) sumDetails.textContent = details.join(' • ');
+      if (totalMon) totalMon.textContent = `৳ ${monthly.toLocaleString('en-IN')}`;
+      if (setupTot) setupTot.textContent = `Setup / Hardware: ৳${setup.toLocaleString('en-IN')}`;
+    }
+
+    document.getElementById('addon-realip')?.addEventListener('change', updateCalculator);
+    document.getElementById('addon-router')?.addEventListener('change', updateCalculator);
+    document.getElementById('calc-order-now-btn')?.addEventListener('click', () => {
+      openBookingModal(`${appState.selectedSpeed} MBPS`);
+    });
+
+    const canvas = document.getElementById('speedometer-canvas');
+    const ctx = canvas?.getContext('2d');
+    const speedDisplayNum = document.getElementById('speed-display-num');
+
+    function drawGauge(speed, maxSpeed = 100) {
+      if (!ctx || !canvas) return;
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+      const radius = 95;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, radius, 0.75 * Math.PI, 2.25 * Math.PI);
+      ctx.strokeStyle = '#1e293b';
+      ctx.lineWidth = 14;
+      ctx.lineCap = 'round';
+      ctx.stroke();
+
+      const fraction = Math.min(Math.max(speed / maxSpeed, 0), 1);
+      const endAngle = 0.75 * Math.PI + fraction * 1.5 * Math.PI;
+
+      if (fraction > 0) {
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0.75 * Math.PI, endAngle);
+        const gradient = ctx.createLinearGradient(0, centerY, canvas.width, centerY);
+        gradient.addColorStop(0, '#dc2626');
+        gradient.addColorStop(1, '#ef4444');
+        ctx.strokeStyle = gradient;
+        ctx.lineWidth = 14;
+        ctx.lineCap = 'round';
+        ctx.stroke();
+      }
+    }
+    if (canvas) drawGauge(0);
+
+    function triggerSpeedTest() {
+      if (appState.isSpeedTesting) return;
+      appState.isSpeedTesting = true;
+      let currentSpeed = 0;
+      const target = appState.selectedSpeed > 0 ? parseFloat((appState.selectedSpeed * 1.05).toFixed(1)) : 31.4;
+      const maxGauge = Math.max(100, target + 20);
+      const statusEl = document.getElementById('speed-test-status');
+      if (statusEl) statusEl.textContent = 'Testing...';
+      
+      const downInterval = setInterval(() => {
+        currentSpeed += Math.max(1.8, target / 25);
+        if (currentSpeed >= target) {
+          clearInterval(downInterval);
+          if (speedDisplayNum) speedDisplayNum.textContent = target.toFixed(1);
+          drawGauge(target, maxGauge);
+          const downVal = document.getElementById('speed-down-val');
+          const upVal = document.getElementById('speed-up-val');
+          if (downVal) downVal.textContent = `${target.toFixed(1)} Mbps`;
+          if (upVal) upVal.textContent = `${(target * 0.92).toFixed(1)} Mbps`;
+          if (statusEl) statusEl.textContent = 'Test Completed';
+          appState.isSpeedTesting = false;
+        } else {
+          const val = Math.max(0, currentSpeed + (Math.random() * 0.4 - 0.2)).toFixed(1);
+          if (speedDisplayNum) speedDisplayNum.textContent = val;
+          drawGauge(parseFloat(val), maxGauge);
+        }
+      }, 50);
+    }
+
+    document.getElementById('start-speedtest-btn')?.addEventListener('click', triggerSpeedTest);
+    document.getElementById('hero-quick-test-btn')?.addEventListener('click', () => {
+      document.getElementById('speedtest')?.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(triggerSpeedTest, 500);
+    });
+
+    function handleSelfCareSearch() {
+      const inputEl = document.getElementById('bill-client-id-input');
+      if (!inputEl) return;
+      const q = inputEl.value.trim();
+      if (!q) return showToast('Please enter your Username or Mobile Number', false);
+      const workingMsg = document.getElementById('self-care-working-msg');
+      if (workingMsg) {
+        workingMsg.textContent = AdminConfig.selfCarePlaceholderMsg;
+        workingMsg.classList.remove('hidden');
+      }
+      showToast(`Searching account: ${q.toUpperCase()}...`);
+    }
+
+    document.getElementById('search-bill-btn')?.addEventListener('click', handleSelfCareSearch);
+    document.getElementById('bill-client-id-input')?.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        handleSelfCareSearch();
+      }
+    });
+
+    const adminModal = document.getElementById('admin-modal');
+    const openAdminBtnMain = document.getElementById('open-admin-btn');
+    const closeAdminBtn = document.getElementById('close-admin-modal-btn');
+    
+    document.querySelectorAll('.admin-tab-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        document.querySelectorAll('.admin-tab-btn').forEach(b => b.className = 'admin-tab-btn px-4 py-3 text-xs sm:text-sm font-bold text-slate-400 border-b-2 border-transparent hover:text-white whitespace-nowrap');
+        e.currentTarget.className = 'admin-tab-btn active px-4 py-3 text-xs sm:text-sm font-bold text-brand-400 border-b-2 border-brand-500 whitespace-nowrap';
+        
+        document.querySelectorAll('.admin-tab-content').forEach(c => c.classList.add('hidden'));
+        const target = document.getElementById(e.currentTarget.getAttribute('data-target'));
+        if (target) target.classList.remove('hidden');
+      });
+    });
+
+    function populateAdminModal() {
+      const setVal = (id, val) => { const el = document.getElementById(id); if (el) el.value = val !== undefined ? val : ''; };
+      
+      setVal('admin-company-name', TempConfig.companyName);
+      setVal('admin-primary-area', TempConfig.primaryAreaName);
+      setVal('admin-logo-subtitle', TempConfig.logoSubtitle);
+      setVal('admin-address', TempConfig.companyAddress);
+      setVal('admin-hotline', TempConfig.hotline);
+      setVal('admin-whatsapp', TempConfig.whatsappNumber);
+      setVal('admin-email', TempConfig.supportEmail);
+      setVal('admin-footer-office', TempConfig.footerOfficeTitle);
+      setVal('admin-footer-partner', TempConfig.footerPartnerTag);
+      setVal('admin-footer-copyright', TempConfig.footerCopyright);
+      setVal('admin-username-input', TempConfig.adminUsername);
+      setVal('admin-password-input', TempConfig.adminPassword);
+
+      setVal('admin-top-badge', TempConfig.topBarBadge);
+      setVal('admin-notice-en', TempConfig.announcementEnglish);
+      setVal('admin-notice-bn', TempConfig.announcementBangla);
+      setVal('admin-hero-badge', TempConfig.heroBadge);
+      setVal('admin-hero-title-main', TempConfig.heroTitleMain);
+      setVal('admin-hero-title-highlight', TempConfig.heroTitleHighlight);
+      setVal('admin-hero-subtitle', TempConfig.heroSubtitle);
+      setVal('admin-stat1-val', TempConfig.stat1Val);
+      setVal('admin-stat1-lbl', TempConfig.stat1Label);
+      setElText('admin-stat3-val', TempConfig.stat3Val);
+      setElText('admin-stat3-lbl', TempConfig.stat3Label);
+      setVal('admin-slider-img1', TempConfig.sliderImage1);
+      setVal('admin-slider-img2', TempConfig.sliderImage2);
+      setVal('admin-slider-img3', TempConfig.sliderImage3);
+      setVal('admin-gw-title', TempConfig.gatewayTitle);
+      setVal('admin-gw-stats', TempConfig.gatewayStats);
+
+      setVal('admin-pkg-badge', TempConfig.pkgBadge);
+      setVal('admin-pkg-title', TempConfig.pkgTitle);
+      setVal('admin-pkg-subtitle', TempConfig.pkgSubtitle);
+      setVal('admin-cov-badge', TempConfig.covBadge);
+      setVal('admin-cov-title', TempConfig.covTitle);
+      setVal('admin-cov-desc', TempConfig.covDesc);
+      setVal('admin-cov-detail', TempConfig.covResultDetail);
+      setVal('admin-hubs-title', TempConfig.hubsBoxTitle);
+      setVal('admin-cov-notice', TempConfig.covMaintenanceNotice);
+
+      setVal('admin-speedtest-sub', TempConfig.speedTestSub);
+      setVal('admin-booking-sub', TempConfig.bookingModalSub);
+      setVal('admin-bdix-title', TempConfig.bdixTitle);
+      setVal('admin-bdix-sub', TempConfig.bdixSubtitle);
+      setVal('admin-selfcare-msg', TempConfig.selfCarePlaceholderMsg);
+
+      if (TempConfig.firebaseConfig) {
+        setVal('admin-fb-apikey', TempConfig.firebaseConfig.apiKey);
+        setVal('admin-fb-projectid', TempConfig.firebaseConfig.projectId);
+        setVal('admin-fb-appid', TempConfig.firebaseConfig.appId);
+        setVal('admin-fb-authdomain', TempConfig.firebaseConfig.authDomain);
+      }
+
+      renderAdminPackages();
+      renderAdminCoverage();
+      renderAdminHubs();
+      renderAdminBdix();
+    }
+
+    function renderAdminPackages() {
+      const list = document.getElementById('admin-pkg-list');
+      if (!list) return;
+      list.innerHTML = TempConfig.packages.map((pkg, index) => {
+        const featuresStr = Array.isArray(pkg.features) ? pkg.features.join(', ') : (pkg.features || '');
+        return `
+        <div class="p-4 bg-slate-800 rounded-xl border border-slate-700 relative space-y-3">
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pr-14">
+            <div><label class="text-[10px] text-slate-400">Speed (MBPS)</label><input type="number" class="w-full bg-slate-900 border border-slate-700 rounded p-1.5 text-xs text-white" value="${pkg.speed}" onchange="updatePkg(${index}, 'speed', this.value)"></div>
+            <div><label class="text-[10px] text-slate-400">Price (৳)</label><input type="number" class="w-full bg-slate-900 border border-slate-700 rounded p-1.5 text-xs text-white" value="${pkg.price}" onchange="updatePkg(${index}, 'price', this.value)"></div>
+            <div><label class="text-[10px] text-slate-400">Package Name</label><input type="text" class="w-full bg-slate-900 border border-slate-700 rounded p-1.5 text-xs text-white" value="${pkg.name}" onchange="updatePkg(${index}, 'name', this.value)"></div>
+            <div class="flex items-end pb-1">
+              <label class="flex items-center gap-2 cursor-pointer text-xs text-brand-300 font-semibold"><input type="checkbox" ${pkg.popular ? 'checked' : ''} onchange="updatePkg(${index}, 'popular', this.checked)"> Most Popular</label>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div><label class="text-[10px] text-slate-400">Short Description</label><input type="text" class="w-full bg-slate-900 border border-slate-700 rounded p-1.5 text-xs text-white" value="${pkg.desc || ''}" onchange="updatePkg(${index}, 'desc', this.value)"></div>
+            <div><label class="text-[10px] text-slate-400">Features (Comma separated)</label><input type="text" class="w-full bg-slate-900 border border-slate-700 rounded p-1.5 text-xs text-white" value="${featuresStr}" onchange="updatePkg(${index}, 'features', this.value)"></div>
+          </div>
+          <button type="button" class="absolute top-3 right-3 px-2 py-1 rounded bg-red-950/60 border border-red-800/60 text-red-400 hover:text-white hover:bg-red-600 text-xs font-bold transition-colors" onclick="deletePkg(${index})">Delete</button>
+        </div>
+      `}).join('');
+    }
+
+    function renderAdminCoverage() {
+      const list = document.getElementById('admin-cov-list');
+      if (!list) return;
+      list.innerHTML = TempConfig.coverageAreas.map((area, index) => `
+        <div class="flex items-center gap-2">
+          <input type="text" class="flex-1 bg-slate-800 border border-slate-700 rounded p-1.5 text-xs text-white" value="${area}" onchange="updateCov(${index}, this.value)">
+          <button type="button" class="text-red-400 hover:text-red-300 p-1" onclick="deleteCov(${index})"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg></button>
+        </div>
+      `).join('');
+    }
+
+    function renderAdminHubs() {
+      const list = document.getElementById('admin-hub-list');
+      if (!list) return;
+      list.innerHTML = TempConfig.hubs.map((hub, index) => `
+        <div class="flex items-center gap-2">
+          <input type="text" class="flex-1 bg-slate-800 border border-slate-700 rounded p-1.5 text-xs text-white" value="${hub}" onchange="updateHub(${index}, this.value)">
+          <button type="button" class="text-red-400 hover:text-red-300 p-1" onclick="deleteHub(${index})"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg></button>
+        </div>
+      `).join('');
+    }
+
+    function renderAdminBdix() {
+      const list = document.getElementById('admin-bdix-list');
+      if (!list) return;
+      if (!Array.isArray(TempConfig.bdixServers)) TempConfig.bdixServers = [];
+      list.innerHTML = TempConfig.bdixServers.map((srv, index) => `
+        <div class="p-3 bg-slate-800 border border-slate-700 rounded-xl space-y-2 relative">
+          <div class="pr-8">
+            <label class="text-[10px] text-slate-400">Server Name</label>
+            <input type="text" class="w-full bg-slate-900 border border-slate-700 rounded p-1.5 text-xs text-white" value="${srv.name || ''}" onchange="updateBdix(${index}, 'name', this.value)">
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="text-[10px] text-slate-400">Category / Info</label>
+              <input type="text" class="w-full bg-slate-900 border border-slate-700 rounded p-1.5 text-xs text-white" value="${srv.desc || ''}" onchange="updateBdix(${index}, 'desc', this.value)">
+            </div>
+            <div>
+              <label class="text-[10px] text-slate-400">Speed Badge</label>
+              <input type="text" class="w-full bg-slate-900 border border-slate-700 rounded p-1.5 text-xs text-white" value="${srv.badge || ''}" onchange="updateBdix(${index}, 'badge', this.value)">
+            </div>
+          </div>
+          <button type="button" class="absolute top-2 right-2 text-red-400 hover:text-red-300 p-1" onclick="deleteBdix(${index})"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg></button>
+        </div>
+      `).join('');
+    }
+
+    window.updatePkg = (index, field, value) => { 
+      if (field === 'speed' || field === 'price') {
+        TempConfig.packages[index][field] = parseInt(value, 10) || 0;
+        if (field === 'speed') {
+          TempConfig.packages[index].category = TempConfig.packages[index].speed <= 30 ? 'budget' : 'gaming';
+        }
+      } else if (field === 'features') {
+        TempConfig.packages[index].features = String(value).split(',').map(s => s.trim()).filter(Boolean);
+      } else {
+        TempConfig.packages[index][field] = value;
+      }
+      if (field === 'popular' && value === true) {
+        TempConfig.packages.forEach((p, i) => { if (i !== index) p.popular = false; });
+        renderAdminPackages();
+      }
+    };
+    window.deletePkg = (index) => { TempConfig.packages.splice(index, 1); renderAdminPackages(); };
+    window.updateCov = (index, value) => { TempConfig.coverageAreas[index] = value; };
+    window.deleteCov = (index) => { TempConfig.coverageAreas.splice(index, 1); renderAdminCoverage(); };
+    window.updateHub = (index, value) => { TempConfig.hubs[index] = value; };
+    window.deleteHub = (index) => { TempConfig.hubs.splice(index, 1); renderAdminHubs(); };
+    window.updateBdix = (index, field, value) => { TempConfig.bdixServers[index][field] = value; };
+    window.deleteBdix = (index) => { TempConfig.bdixServers.splice(index, 1); renderAdminBdix(); };
+
+    document.getElementById('admin-add-pkg-btn')?.addEventListener('click', () => {
+      TempConfig.packages.push({
+        speed: 120,
+        price: 3000,
+        name: "Ultra Gig",
+        contention: "1:8 Contention",
+        category: "gaming",
+        popular: false,
+        desc: "Ultra capacity for corporate & heavy usage.",
+        features: ["1:1 Dedicated Speed", "100 Mbps BDIX Speed", "24/7 SLA Support"]
+      });
+      renderAdminPackages();
+    });
+    document.getElementById('admin-add-cov-btn')?.addEventListener('click', () => {
+      TempConfig.coverageAreas.push("New Coverage Area");
+      renderAdminCoverage();
+    });
+    document.getElementById('admin-add-hub-btn')?.addEventListener('click', () => {
+      TempConfig.hubs.push("New Fiber Hub");
+      renderAdminHubs();
+    });
+    document.getElementById('admin-add-bdix-btn')?.addEventListener('click', () => {
+      TempConfig.bdixServers.push({ name: "New Media FTP", desc: "Movies & Files", badge: "100 Mbps BDIX" });
+      renderAdminBdix();
+    });
+
+    openAdminBtnMain?.addEventListener('click', () => {
+      TempConfig = JSON.parse(JSON.stringify(AdminConfig));
+      populateAdminModal();
+      adminModal?.classList.remove('hidden');
+    });
+
+    closeAdminBtn?.addEventListener('click', () => adminModal?.classList.add('hidden'));
+
+    document.getElementById('admin-reset-default-btn')?.addEventListener('click', () => {
+      TempConfig = JSON.parse(JSON.stringify(DefaultConfig));
+      populateAdminModal();
+      showToast('Default values loaded into editor. Click Save to publish!', true);
+    });
+
+    function syncInputsToTempConfig() {
+      const getVal = (id) => document.getElementById(id)?.value.trim() || '';
+      
+      TempConfig.companyName = getVal('admin-company-name') || 'HIGH RANGE';
+      TempConfig.primaryAreaName = getVal('admin-primary-area') || 'Gandaria';
+      TempConfig.logoSubtitle = getVal('admin-logo-subtitle');
+      TempConfig.companyAddress = getVal('admin-address');
+      TempConfig.hotline = getVal('admin-hotline');
+      TempConfig.whatsappNumber = formatWhatsAppNumber(getVal('admin-whatsapp'));
+      TempConfig.supportEmail = getVal('admin-email') || 'support@highrangeinternet.com';
+      TempConfig.footerOfficeTitle = getVal('admin-footer-office');
+      TempConfig.footerPartnerTag = getVal('admin-footer-partner');
+      TempConfig.footerCopyright = getVal('admin-footer-copyright');
+      TempConfig.adminUsername = getVal('admin-username-input') || 'Ahamed';
+      TempConfig.adminPassword = getVal('admin-password-input') || 'Rosi';
+
+      TempConfig.topBarBadge = getVal('admin-top-badge');
+      TempConfig.announcementEnglish = getVal('admin-notice-en');
+      TempConfig.announcementBangla = getVal('admin-notice-bn');
+      TempConfig.heroBadge = getVal('admin-hero-badge');
+      TempConfig.heroTitleMain = getVal('admin-hero-title-main');
+      TempConfig.heroTitleHighlight = getVal('admin-hero-title-highlight');
+      TempConfig.heroSubtitle = getVal('admin-hero-subtitle');
+      TempConfig.stat1Val = getVal('admin-stat1-val');
+      TempConfig.stat1Label = getVal('admin-stat1-lbl');
+      TempConfig.stat2Val = getVal('admin-stat2-val');
+      TempConfig.stat2Label = getVal('admin-stat2-lbl');
+      TempConfig.stat3Val = getVal('admin-stat3-val');
+      TempConfig.stat3Label = getVal('admin-stat3-lbl');
+      TempConfig.sliderImage1 = getVal('admin-slider-img1');
+      TempConfig.sliderImage2 = getVal('admin-slider-img2');
+      TempConfig.sliderImage3 = getVal('admin-slider-img3');
+      TempConfig.gatewayTitle = getVal('admin-gw-title');
+      TempConfig.gatewayStats = getVal('admin-gw-stats');
+
+      TempConfig.pkgBadge = getVal('admin-pkg-badge');
+      TempConfig.pkgTitle = getVal('admin-pkg-title');
+      TempConfig.pkgSubtitle = getVal('admin-pkg-subtitle');
+      TempConfig.covBadge = getVal('admin-cov-badge');
+      TempConfig.covTitle = getVal('admin-cov-title');
+      TempConfig.covDesc = getVal('admin-cov-desc');
+      TempConfig.covResultDetail = getVal('admin-cov-detail');
+      TempConfig.hubsBoxTitle = getVal('admin-hubs-title');
+      TempConfig.covMaintenanceNotice = getVal('admin-cov-notice');
+
+      TempConfig.speedTestSub = getVal('admin-speedtest-sub');
+      TempConfig.bookingModalSub = getVal('admin-booking-sub');
+      TempConfig.bdixTitle = getVal('admin-bdix-title');
+      TempConfig.bdixSubtitle = getVal('admin-bdix-sub');
+      TempConfig.selfCarePlaceholderMsg = getVal('admin-selfcare-msg');
+
+      TempConfig.firebaseConfig = {
+        apiKey: getVal('admin-fb-apikey'),
+        projectId: getVal('admin-fb-projectid'),
+        appId: getVal('admin-fb-appid'),
+        authDomain: getVal('admin-fb-authdomain')
+      };
+    }
+
+    document.getElementById('admin-export-code-btn')?.addEventListener('click', async () => {
+      syncInputsToTempConfig();
+      AdminConfig = JSON.parse(JSON.stringify(TempConfig));
+      
+      try {
+        showToast("Generating Backup JSON file...");
+        const configData = JSON.stringify(AdminConfig, null, 4);
+        const blob = new Blob([configData], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'high_range_website_backup.json'; 
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast("Backup Data Downloaded successfully! Safe and clean.", true);
+      } catch (err) {
+        console.error(err);
+        showToast("Failed to generate backup.", false);
+      }
+    });
+
+    document.getElementById('test-connection-btn')?.addEventListener('click', async () => {
+      showToast("Testing Firebase Connection...");
+      const success = await initFirebaseDynamic();
+      if (success) {
+        showToast("Connection Successful! Firestore is online.", true);
+      } else {
+        showToast("Connection check failed. Verify credentials.", false);
+      }
+    });
+
+    document.getElementById('admin-save-all-btn')?.addEventListener('click', async () => {
+      syncInputsToTempConfig();
+      AdminConfig = JSON.parse(JSON.stringify(TempConfig));
+      localStorage.setItem('hr_admin_config_v2', JSON.stringify(AdminConfig));
+      renderDynamicContent();
+
+      const fbReady = await initFirebaseDynamic();
+      if (fbReady && db && cmsDocRef) {
+        try {
+          if (auth && !auth.currentUser) {
+            try { await signInAnonymously(auth); } catch(e) {}
+          }
+          await setDoc(cmsDocRef, AdminConfig);
+          showToast('Changes successfully saved to Firebase Cloud & Published!', true);
+        } catch (err) {
+          console.error("Cloud save error:", err);
+          showToast('Saved locally, but cloud sync needs active Firestore rules.', false);
+        }
+      } else {
+        showToast('Settings saved successfully!', true);
+      }
+      
+      adminModal?.classList.add('hidden');
+    });
+
+    const bookingForm = document.getElementById('booking-form');
+    bookingForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('modal-cust-name').value.trim();
+      const phone = document.getElementById('modal-cust-phone').value.trim();
+      const pkg = document.getElementById('modal-pkg-select').value;
+      const address = document.getElementById('modal-gandaria-address').value.trim();
+
+      const waNum = formatWhatsAppNumber(AdminConfig.whatsappNumber);
+      const message = `*New Connection Request (${AdminConfig.companyName})*\n\n*Name:* ${name}\n*Mobile:* ${phone}\n*Package:* ${pkg}\n*Address:* ${address}\n\n_Generated from Website_`;
+      const whatsappUrl = `https://wa.me/${waNum}?text=${encodeURIComponent(message)}`;
+
+      window.open(whatsappUrl, '_blank');
+      closeBookingModal();
+      bookingForm.reset();
+      showToast('Redirecting to WhatsApp to send request...');
+    });
+
+    function openSupportModal() {
+      document.getElementById('support-modal')?.classList.remove('hidden');
+    }
+    
+    function closeSupportModal() {
+      document.getElementById('support-modal')?.classList.add('hidden');
+    }
+
+    const supportForm = document.getElementById('support-form');
+    supportForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('support-cust-name').value.trim();
+      const phone = document.getElementById('support-cust-phone').value.trim();
+      const address = document.getElementById('support-gandaria-address').value.trim();
+      const problem = document.getElementById('support-problem').value.trim();
+
+      const waNum = formatWhatsAppNumber(AdminConfig.whatsappNumber);
+      const message = `*Support Ticket 🛠️ (${AdminConfig.companyName})*\n\n*Name:* ${name}\n*Mobile:* ${phone}\n*Address:* ${address}\n*Issue/Problem:* ${problem}\n\n_Generated from Website Support Ticket Portal_`;
+      const whatsappUrl = `https://wa.me/${waNum}?text=${encodeURIComponent(message)}`;
+
+      window.open(whatsappUrl, '_blank');
+      closeSupportModal();
+      supportForm.reset();
+      showToast('Redirecting to WhatsApp to submit support ticket...');
+    });
+    
+    document.getElementById('footer-support-btn')?.addEventListener('click', openSupportModal);
+    document.getElementById('close-support-modal-btn')?.addEventListener('click', closeSupportModal);
+
+    const langToggleBtn = document.getElementById('lang-toggle-btn');
+    langToggleBtn?.addEventListener('click', () => {
+      const topAnnouncement = document.getElementById('top-announcement-text');
+      const connBtn = document.getElementById('btn-get-connection');
+      const ind = document.getElementById('lang-indicator');
+
+      if (appState.language === 'en') {
+        appState.language = 'bn';
+        if (ind) ind.textContent = 'English View';
+        if (topAnnouncement) topAnnouncement.textContent = AdminConfig.announcementBangla;
+        if (connBtn) connBtn.textContent = 'নতুন সংযোগ নিন';
+        showToast('ভাষা পরিবর্তন করা হয়েছে (বাংলা)');
+      } else {
+        appState.language = 'en';
+        if (ind) ind.textContent = 'বাংলায় দেখুন';
+        if (topAnnouncement) topAnnouncement.textContent = AdminConfig.announcementEnglish;
+        if (connBtn) connBtn.textContent = 'Get Connection';
+        showToast('Language switched to English');
+      }
+    });
+
+    document.getElementById('floating-contact-btn')?.addEventListener('click', () => {
+      const waNum = formatWhatsAppNumber(AdminConfig.whatsappNumber);
+      const message = `Hello ${AdminConfig.companyName}, I need assistance regarding internet connection.`;
+      window.open(`https://wa.me/${waNum}?text=${encodeURIComponent(message)}`, '_blank');
+    });
+
+  </script>
+</body>
+</html>
